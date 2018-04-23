@@ -1,0 +1,19 @@
+<wpml-config>
+    <admin-texts>
+        <key name="cmsms_options_interior_style_header">
+            <key name="interior_header_top_line_short_info" />
+        </key>
+        <key name="cmsms_options_interior_style_footer">
+            <key name="interior_footer_html" />
+            <key name="interior_footer_copyright" />
+        </key>
+        <key name="cmsms_options_interior_single_project">
+            <key name="interior_portfolio_project_details_title" />
+        </key>
+        <key name="cmsms_options_interior_single_profile">
+            <key name="interior_profile_post_details_title" />
+        </key>
+    </admin-texts>
+</wpml-config>
+
+
