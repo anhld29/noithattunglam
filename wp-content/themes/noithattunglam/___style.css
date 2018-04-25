@@ -1,15 +1,20 @@
-/**
- * @package 	WordPress
- * @subpackage 	Interior Design
- * @version 	1.1.1
- * 
- * Theme CSS Rules
- * Created by CMSMasters
- * 
- */
+﻿/*
+Theme Name: Noithattunglam
+Theme URI: http://noithattunglam.com
+Author: cmsmasters
+Author URI: http://mauthietke.info
+Description: Website nội thất
+Version: 1.1.2
+License:
+License URI:
+Text Domain: interior-design
+Domain Path: /framework/languages
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+
 /*-------------------------------------------------------------------------
 
-	0.	LESS Variables + Functions
 	1.	Browser Reset
 	2.	Globally Applied Styles
 	3.	Header + Centered + Right + Fixed Version
@@ -25,11 +30,8 @@
 	13.	CSS3 Animations
 
 -------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------*/
-/*	0.	LESS Variables & Functions	*/
-/*-------------------------------------------------------------------------*/
-/***************** Variables ******************/
-/***************** Functions ******************/
+
+
 /*-------------------------------------------------------------------------*/
 /*	1.	Browser Reset	*/
 /*-------------------------------------------------------------------------*/
@@ -219,7 +221,11 @@ ul li {
   display: block;
 }
 #middle {
-  padding-top: 0 !important;
+  border-left-width: 40px;
+  border-right-width: 40px;
+  border-right-style: solid;
+  border-left-style: solid;
+  padding-top: 60px;
 }
 #bottom {
   border-left-width: 40px;
@@ -537,6 +543,21 @@ mark {
 /*-------------------------------------------------------------------------*/
 /*	2. Globally Applied Styles	*/
 /*-------------------------------------------------------------------------*/
+html:before,
+html:after {
+  display: block;
+  content: '';
+  width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+}
+html:after {
+  left: auto;
+  right: 0;
+}
 body {
   text-align: left;
 }
@@ -1156,12 +1177,14 @@ nav > div > ul a {
 #footer .social_wrap .social_wrap_inner ul,
 #header .social_wrap .social_wrap_inner ul {
   padding-top: 1px;
+  height: 17px;
   overflow: hidden;
   display: table-cell;
   vertical-align: middle;
 }
 #footer .social_wrap .social_wrap_inner ul li,
 #header .social_wrap .social_wrap_inner ul li {
+  height: 17px;
   display: block;
   float: left;
   padding-left: 14px;
@@ -1175,18 +1198,8 @@ nav > div > ul a {
   float: left;
   display: block;
   font-size: 17px;
-  width: 28px;
-  height: 28px;
-  background: #999999;
-  color: #474341;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  position: relative;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  width: 17px;
+  height: 17px;
 }
 #footer .social_wrap .social_wrap_inner a[class^="cmsms-icon-"]:before,
 #header .social_wrap .social_wrap_inner a[class^="cmsms-icon-"]:before,
@@ -1198,10 +1211,6 @@ nav > div > ul a {
 #header .social_wrap .social_wrap_inner a[class*=" cmsms_theme_icon_"]:before {
   width: 1em;
   height: 1em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 #navigation > li.menu-item-mega > div.menu-item-mega-container > ul > li > ul > li {
   padding: 0;
@@ -1239,13 +1248,13 @@ nav > div > ul a {
 }
 #header nav > div > ul ul {
   margin: 20px 0 0;
-  padding: 15px 0px;
+  padding: 27px 0px;
 }
 #header nav > div > ul ul ul {
   margin: -15px 0 0 20px;
 }
 #header nav > div > ul ul li {
-  padding: 0 15px;
+  padding: 0 20px 0 30px;
   margin-top: 3px;
 }
 #header nav > div > ul ul li:first-child {
@@ -2053,6 +2062,7 @@ nav > div > ul a {
 /* Special Heading global styles */
 .cmsms_heading_wrap {
   position: relative;
+  overflow: hidden;
 }
 .cmsms_heading_wrap .cmsms_heading_divider {
   display: inline-block;
@@ -3032,9 +3042,6 @@ nav > div > ul a {
 #header .header_mid ul#navigation li ul li.menu-item-has-children > span.cmsms_cross.cmsms_opened_list:before {
   content: '';
 }
-.header_mid_inner {
-  margin-top: 30px;
-}
 .header_mid_inner .header_right_wrap {
   float: right;
   padding-right: 20px;
@@ -3054,16 +3061,7 @@ nav > div > ul a {
 }
 .header_mid_inner .header_right_wrap ul#navigation > li > a {
   border: 0;
-  padding: 0 15px;
-  text-transform: uppercase;
-  color: #FFF;
-  font-weight: 400;
-  font-size: 18px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  padding: 0 20px;
 }
 .header_mid_inner .header_right_wrap ul#navigation > li > a > span {
   display: inline-block;
@@ -3073,9 +3071,6 @@ nav > div > ul a {
 }
 .header_mid_inner .header_right_wrap ul#navigation > li > a > span > span.nav_subtitle {
   display: block;
-}
-.header_mid_inner .header_right_wrap ul#navigation > li > a:hover {
-  opacity: .7;
 }
 .header_mid_inner .header_right_wrap ul#navigation > li.menu-item-mega > div > ul > li:hover > a,
 .header_mid_inner .header_right_wrap ul#navigation > li.menu-item-mega > div > ul > li.current-menu-item > a {
@@ -3696,12 +3691,9 @@ body .headline {
   float: right;
 }
 /***************** Fixed Footer-Header ******************/
-#header {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 9;
+#header,
+#footer {
+  position: fixed;
 }
 /***************** Slide Top Button ******************/
 #slide_top {
@@ -5122,47 +5114,27 @@ button {
 }
 .cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li {
   display: inline-block;
+  padding: 0 18px 0 18px;
   margin-top: 20px;
-  margin-right: 30px;
 }
 .cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li.current a.button {
-  z-index: 0;
-  border-width: 0;
-  border-style: solid;
-  color: #FFF;
-  position: relative;
-}
-.cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li.current a.button:before {
-  width: 110%;
-  height: 100%;
-  content: "";
-  transform: skew(-25deg, 0);
-  -webkit-transform: skew(-25deg, 0);
-  -moz-transform: skew(-25deg, 0);
-  -o-transform: skew(-25deg, 0);
-  -ms-transform: skew(-25deg, 0);
-  background: #ff6e01;
-  z-index: -1;
-  position: absolute;
-  left: -5%;
-  top: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 .cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li:first-child {
   padding-left: 0;
 }
 .cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li:last-child {
-  margin-right: 0;
+  padding-right: 0;
 }
 .cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li:before {
   content: none;
 }
 .cmsms_project_filter_wrap .cmsms_project_filter .cmsms_project_filter_block .cmsms_project_filter_list li > a.button {
-  padding: 5px 18px;
-  display: block;
+  padding: 0;
   border-width: 0;
   border-style: solid;
   border-radius: 0;
-  font-size: 18px;
 }
 .cmsms_wrap_more_projects {
   width: 100%;
@@ -5316,9 +5288,9 @@ button {
   margin: 0 -20px;
 }
 .portfolio.large_gap .project {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
 }
 .portfolio.large_gap .project .project_outer {
   margin-bottom: 2px;
@@ -9872,7 +9844,4 @@ html.csstransitions .cmsms_stats.stats_mode_bars.shortcode_animated .cmsms_stat_
   to {
     opacity: 1;
   }
-}
-html .cmsms_color_scheme_second .cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner .cmsms_counter_title {
-  color: #ff6e01 !important;
 }

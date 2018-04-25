@@ -1,7 +1,16 @@
+@charset "utf-8";
+/* ===================================================================
+CSS information
+
+ file name  : common.css
+ author     : Le Duc Anh
+ style info : mauthietke.info
+=================================================================== */
+@import "settings";
 /**
- * @package 	WordPress
- * @subpackage 	Interior Design
- * @version 	1.1.1
+ * $package 	WordPress
+ * $subpackage 	Interior Design
+ * $version 	1.1.1
  * 
  * Theme CSS Rules
  * Created by CMSMasters
@@ -36,105 +45,105 @@
 /*-------------------------------------------------------------------------*/
 
 /***************** Variables ******************/
-@input_pad: 8px;
+$input_pad: 8px;
 
-@header_top_height: 35px;
-@header_mid_height: 60px;
-@main_padd: 40px;
+$header_top_height: 35px;
+$header_mid_height: 60px;
+$main_padd: 40px;
 
-@line_height_pad: 20px;
-@blocks_hor_pad: 0px;
-@footer_pad : 25px;
-@cont_vert_pad: 30px;
+$line_height_pad: 20px;
+$blocks_hor_pad: 0px;
+$footer_pad : 25px;
+$cont_vert_pad: 30px;
 
-@col_mar: 1.6%;
+$col_mar: 1.6%;
 
-@resp_blocks_pad: 69%;
-@img_pad_bot: 69%;
-@sidebar_width: 26%;
-@content_width: 100% - @sidebar_width;
+$resp_blocks_pad: 69%;
+$img_pad_bot: 69%;
+$sidebar_width: 26%;
+$content_width: 100% - $sidebar_width;
 
-@header_side_side_pad: 30px; 
-@header_side_top_side: 60px;
+$header_side_side_pad: 30px; 
+$header_side_top_side: 60px;
 
-@dropdown_width: 210px;
-@dropdown_width_top: 120px;
-@dropdown_anim_pad: 20px;
+$dropdown_width: 210px;
+$dropdown_width_top: 120px;
+$dropdown_anim_pad: 20px;
 
-@cont_width_def: 1160px;
+$cont_width_def: 1160px;
 
 
 /***************** Functions ******************/
-.fl () {
+@mixin fl(){
 	float:left;
 }
 
-.fr () {
+@mixin fr(){
 	float:right;
 }
 
-.dn () {
+@mixin dn(){
 	display:none;
 }
 
-.tal () {
+@mixin tal(){
 	text-align:left;
 }
 
-.tac () {
+@mixin tac(){
 	text-align:center;
 }
 
-.tar () {
+@mixin tar(){
 	text-align:right;
 }
 
-.cl () {
+@mixin cl(){
 	clear:both;
 }
 
-.ovh () {
+@mixin ovh(){
 	overflow:hidden;
 }
 
-.m0a () {
+@mixin m0a(){
 	margin:0 auto;
 }
 
-.bd (@w:1px; @t:solid) {
-	border-width:@w;
-	border-style:@t;
+@mixin bd($w:1px, $t:solid){
+	border-width:$w;
+	border-style:$t;
 }
 
-.bdt (@w:1px; @t:solid) {
-	border-top-width:@w;
-	border-top-style:@t;
+@mixin bdt($w:1px, $t:solid){
+	border-top-width:$w;
+	border-top-style:$t;
 }
 
-.bdb (@w:1px; @t:solid) {
-	border-bottom-width:@w;
-	border-bottom-style:@t;
+@mixin bdb($w:1px, $t:solid){
+	border-bottom-width:$w;
+	border-bottom-style:$t;
 }
 
-.bdr (@w:1px; @t:solid) {
-	border-right-width:@w;
-	border-right-style:@t;
+@mixin bdr($w:1px, $t:solid){
+	border-right-width:$w;
+	border-right-style:$t;
 }
 
-.bdl (@w:1px; @t:solid) {
-	border-left-width:@w;
-	border-left-style:@t;
+@mixin bdl($w:1px, $t:solid){
+	border-left-width:$w;
+	border-left-style:$t;
 }
 
-.color_white_opacity (@op:.5) {
-	color:rgba(255, 255, 255, @op);
+@mixin color_white_opacity($op:.5){
+	color:rgba(255, 255, 255, $op);
 }
 
-.bg_white_opacity (@op:.5) {
-	background-color:rgba(255, 255, 255, @op);
+@mixin bg_white_opacity($op:.5){
+	background-color:rgba(255, 255, 255, $op);
 }
 
-.fullwidth_in_block () {
+@mixin fullwidth_in_block(){
 	width:100%;
 	height:100%;
 	position:absolute;
@@ -142,11 +151,11 @@
 	left:0;
 }
 
-.op (@op:.5) {
-	opacity:@op;
+@mixin op($op:.5){
+	opacity:$op;
 }
 
-.cl_after () {
+@mixin cl_after(){
 	content:'.';
 	display:block;
 	clear:both;
@@ -155,118 +164,118 @@
 	overflow:hidden;
 }
 
-.pos_abs (@w:1em; @h:1em; @l:0; @r:0; @t:0; @b:0) {
-	width:@w;
-	height:@h;
+@mixin pos_abs($w:1em, $h:1em, $l:0, $r:0, $t:0, $b:0){
+	width:$w;
+	height:$h;
 	margin:auto !important;
 	position:absolute;
-	left:@l;
-	right:@r;
-	top:@t;
-	bottom:@b;
+	left:$l;
+	right:$r;
+	top:$t;
+	bottom:$b;
 }
 
-.bdbx () {
+@mixin bdbx(){
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 
-.ctbx () {
+@mixin ctbx(){
 	-webkit-box-sizing:content-box;
 	-moz-box-sizing:content-box;
 	box-sizing:content-box;
 }
 
-.bdrs (@radius:5px) {
-	-webkit-border-radius:@radius;
-	border-radius:@radius;
+@mixin bdrs($radius:5px){
+	-webkit-border-radius:$radius;
+	border-radius:$radius;
 }
 
-.bxsh (@x:0; @y:0; @blur:5px; @spred:0; @alpha:.05) {
-	-webkit-box-shadow:@x @y @blur @spred rgba(0, 0, 0, @alpha);
-	box-shadow:@x @y @blur @spred rgba(0, 0, 0, @alpha);
+@mixin bxsh($x:0,$y:0,$blur:5px,$spred:0,$alpha:.05){
+	-webkit-box-shadow:$x $y $blur $spred rgba(0, 0, 0, $alpha);
+	box-shadow:$x $y $blur $spred rgba(0, 0, 0, $alpha);
 }
 
-.bxshi (@x:0; @y:0; @blur:5px; @spred:0; @alpha:.05) {
-	-webkit-box-shadow:inset @x @y @blur @spred rgba(0, 0, 0, @alpha);
-	box-shadow:inset @x @y @blur @spred rgba(0, 0, 0, @alpha);
+@mixin bxshi($x:0, $y:0, $blur:5px, $spred:0, $alpha:.05){
+	-webkit-box-shadow:inset $x $y $blur $spred rgba(0, 0, 0, $alpha);
+	box-shadow:inset $x $y $blur $spred rgba(0, 0, 0, $alpha);
 }
 
-.bxsh_none () {
+@mixin bxsh_none(){
 	-webkit-box-shadow:none;
 	box-shadow:none;
 }
 
-.trans(@trans:0) when not (@trans = 0) {
-    -webkit-transition:@trans;
-    -moz-transition:@trans;
-    -ms-transition:@trans;
-    -o-transition:@trans;
-    transition:@trans;
+@mixin trans($trans:0) when not ($trans = 0){
+    -webkit-transition:$trans;
+    -moz-transition:$trans;
+    -ms-transition:$trans;
+    -o-transition:$trans;
+    transition:$trans;
 }
 
-.arrow_top (@h:5px; @w:5px) {
+@mixin arrow_top($h:5px, $w:5px){
 	border-top:0 solid transparent !important;
-	border-left:@w solid transparent !important;
-	border-right:@w solid transparent !important;
-	border-bottom-width:@h;
+	border-left:$w solid transparent !important;
+	border-right:$w solid transparent !important;
+	border-bottom-width:$h;
 	border-bottom-style:solid;
 }
 
-.arrow_bottom (@h:5px; @w:5px) {
+@mixin arrow_bottom($h:5px, $w:5px){
 	border-bottom:0 solid transparent !important;
-	border-left:@w solid transparent !important;
-	border-right:@w solid transparent !important;
-	border-top-width:@h;
+	border-left:$w solid transparent !important;
+	border-right:$w solid transparent !important;
+	border-top-width:$h;
 	border-top-style:solid;
 }
 
-.arrow_left (@h:5px; @w:5px) {
+@mixin arrow_left($h:5px, $w:5px){
 	border-left:0 solid transparent !important;
-	border-top:@w solid transparent !important;
-	border-bottom:@w solid transparent !important;
-	border-right-width:@h;
+	border-top:$w solid transparent !important;
+	border-bottom:$w solid transparent !important;
+	border-right-width:$h;
 	border-right-style:solid;
 }
 
-.arrow_right (@h:5px; @w:5px) {
+@mixin arrow_right($h:5px, $w:5px){
 	border-right:0 solid transparent !important;
-	border-top:@w solid transparent !important;
-	border-bottom:@w solid transparent !important;
-	border-left-width:@h;
+	border-top:$w solid transparent !important;
+	border-bottom:$w solid transparent !important;
+	border-left-width:$h;
 	border-left-style:solid;
 }
 
-.arrow_top_left (@h:5px; @w:5px) {
-	border-right:@w solid transparent !important;
+@mixin arrow_top_left($h:5px, $w:5px){
+	border-right:$w solid transparent !important;
 	border-left:0 solid transparent !important;
 	border-bottom:0 solid transparent !important;
-	border-top-width:@h;
+	border-top-width:$h;
 	border-top-style:solid;
 }
 
-.arrow_top_right (@h:5px; @w:5px) {
-	border-bottom:@h solid transparent !important;
+@mixin arrow_top_right($h:5px, $w:5px){
+	border-bottom:$h solid transparent !important;
 	border-top:0 solid transparent !important;
 	border-left:0 solid transparent !important;
-	border-right-width:@w;
+	border-right-width:$w;
 	border-right-style:solid;
 }
 
-.arrow_bottom_left (@h:5px; @w:5px) {
-	border-top:@h solid transparent !important;
+@mixin arrow_bottom_left($h:5px, $w:5px){
+	border-top:$h solid transparent !important;
 	border-right:0 solid transparent !important;
 	border-bottom:0 solid transparent !important;
-	border-left-width:@w;
+	border-left-width:$w;
 	border-left-style:solid;
 }
 
-.arrow_bottom_right (@h:5px; @w:5px) {
-	border-left:@w solid transparent !important;
+@mixin arrow_bottom_right($h:5px, $w:5px){
+	border-left:$w solid transparent !important;
 	border-top:0 solid transparent !important;
 	border-right:0 solid transparent !important;
-	border-bottom-width:@h;
+	border-bottom-width:$h;
 	border-bottom-style:solid;
 }
 
@@ -366,7 +375,7 @@ body {
 *, 
 *:before, 
 *:after {
-	.bdbx;
+	@include bdbx;
 }
 
 article, 
@@ -413,7 +422,7 @@ audio:not([controls]) {
 }
 
 iframe {
-	margin-bottom:@line_height_pad;
+	margin-bottom:$line_height_pad;
 	max-width:100%;
 }
 
@@ -434,7 +443,7 @@ abbr {
 
 address {
 	font-style:normal;
-	margin:0 0 @line_height_pad;
+	margin:0 0 $line_height_pad;
 }
 
 code {
@@ -453,7 +462,7 @@ h6 {
 ul, 
 ol {
 	list-style-position:inside;
-	margin-bottom:@line_height_pad;
+	margin-bottom:$line_height_pad;
 	
 	li {
 		padding:8px 0 0;
@@ -464,14 +473,14 @@ ol {
 		
 		li {
 			&:first-child {
-				padding:@line_height_pad / 2 0 0;
+				padding:$line_height_pad / 2 0 0;
 			}
 		}
 	}
 	
 	ul, 
 	ol {
-		margin:0 0 0 @blocks_hor_pad;
+		margin:0 0 0 $blocks_hor_pad;
 	}
 }
 
@@ -484,8 +493,8 @@ ul li {
 }
 
 #bottom {
-	border-left-width: @main_padd;
-	border-right-width: @main_padd;
+	border-left-width: $main_padd;
+	border-right-width: $main_padd;
 	border-right-style: solid;
 	border-left-style: solid;
 }
@@ -493,7 +502,7 @@ ul li {
 #header .header_mid_inner,
 #header .header_top_inner,
 .footer_bg {
-	padding: 0 @main_padd;
+	padding: 0 $main_padd;
 	ul, 
 	ol {
 		overflow:visible;
@@ -653,9 +662,9 @@ figure {
 
 fieldset {
 	margin:25px 2px 0;
-	padding:1.5em 1em .5em;
+	padding:1.5em 1em @include 5em;
 	margin-bottom:30px;
-	.bd(0);
+	@include bd(0);
 	
 	legend {
 		padding:3px 10px;
@@ -693,7 +702,7 @@ input[type=search],
 textarea,
 select, 
 option {
-	.bdbx;
+	@include bdbx;
 }
 
 input[type=text],
@@ -702,15 +711,15 @@ input[type=password],
 input[type=number], 
 input[type=search], 
 textarea {
-	.bdrs(0);
+	@include bdrs(0);
 }
 
 optgroup {
 	font-weight:bold;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-adjust-hue-button,
+input[type=number]::-webkit-outer-adjust-hue-button {
 	height:auto;
 }
 
@@ -727,7 +736,7 @@ input[type=search]::-webkit-search-decoration {
 input[type="checkbox"],
 input[type="radio"] {
 	padding:0;
-	.bdbx;
+	@include bdbx;
 }
 
 button {
@@ -752,7 +761,7 @@ input::-moz-focus-inner {
 
 input[type=text]::-ms-clear, 
 p:empty {
-	.dn;
+	@include dn;
 }
 
 :focus {
@@ -812,7 +821,7 @@ dfn {
 
 hr {
 	height:0;
-	.ctbx;
+	@include ctbx;
 }
 
 mark {
@@ -850,8 +859,8 @@ mark {
 			position:absolute;
 			right:40px;
 			top:30px;
-			.tac;
-			.bdrs(50%);
+			@include tac;
+			@include bdrs(50%);
 		}
 	}
 }
@@ -882,12 +891,12 @@ option {
 	padding:0 10px;
 	margin:0;
 	max-width:100%;
-	.bd(0);
-	.bdb(2px);
+	@include bd(0);
+	@include bdb(2px);
 }
 
 .mac_only select {
-	.bd(2px);
+	@include bd(2px);
 }
 
 input[type=number] {
@@ -909,7 +918,7 @@ option {
 .widget_wysija input[type=text], 
 .widget_wysija input[type=email] {
 	width:100% !important;
-	padding:@input_pad !important;
+	padding:$input_pad !important;
 }
 
 .widget_wysija_cont .wysija-submit {
@@ -924,11 +933,11 @@ option {
 .gform_wrapper input[type=number], 
 .gform_wrapper input[type=password], 
 .gform_wrapper textarea {
-	padding:@input_pad !important;
+	padding:$input_pad !important;
 }
 
 .gform_wrapper select {
-	padding:@input_pad !important;
+	padding:$input_pad !important;
 	margin:0 !important;
 }
 
@@ -942,7 +951,7 @@ input[type=password]:focus,
 input[type=number]:focus, 
 input[type=search]:focus,
 textarea:focus {
-	.bdb(2px);
+	@include bdb(2px);
 }
 
 .navigation_show {
@@ -957,7 +966,7 @@ textarea:focus {
 	width:100%;
 	
 	tr {
-		.bdt;
+		@include bdt;
 		
 		td, 
 		th {
@@ -985,7 +994,7 @@ textarea:focus {
 	tbody tr:first-child, 
 	tr.cmsms_table_row_header,
 	tr.cmsms_table_row_footer {
-		.bdt(0);
+		@include bdt(0);
 	}
 }
 
@@ -1006,12 +1015,12 @@ audio.full-width {
 }
 
 .preloader {
-	padding-bottom:@img_pad_bot;
+	padding-bottom:$img_pad_bot;
 	display:inline-block;
 	text-align:center;
 	
 	.full-width {
-		.fullwidth_in_block;
+		@include fullwidth_in_block;
 	}
 	
 	&.highImg {
@@ -1028,18 +1037,18 @@ audio.full-width {
 }
 
 .resizable_block {
-	padding-bottom:@resp_blocks_pad;
-	.ovh;
+	padding-bottom:$resp_blocks_pad;
+	@include ovh;
 	
 	.full-width {
-		.fullwidth_in_block;
+		@include fullwidth_in_block;
 	}
 }
 
 .cmsms_img_wrap {
 	display:block;
 	position:relative;
-	.ovh;
+	@include ovh;
 
 	.img_placeholder {
 		width:100%;
@@ -1050,14 +1059,14 @@ audio.full-width {
 		
 		&:before {
 			font-size:40px;
-			.pos_abs;
+			@include pos_abs;
 		}
 	}
 	
 	.highImg {
 		.img_placeholder {
 			display:block;
-			padding-bottom:@img_pad_bot;
+			padding-bottom:$img_pad_bot;
 			position:relative;
 		}
 	}
@@ -1066,8 +1075,8 @@ audio.full-width {
 .cmsms_img_rollover_wrap {
 	display:block;
 	position:relative;
-	.tac;
-	.ovh;
+	@include tac;
+	@include ovh;
 
 	.img_placeholder {
 		width:100%;
@@ -1078,14 +1087,14 @@ audio.full-width {
 		
 		&:before {
 			font-size:40px;
-			.pos_abs;
+			@include pos_abs;
 		}
 	}
 	
 	&.highImg {
 		.img_placeholder {
 			display:block;
-			padding-bottom:@img_pad_bot;
+			padding-bottom:$img_pad_bot;
 			position:relative;
 		}
 	}
@@ -1100,9 +1109,9 @@ audio.full-width {
 		
 		.cmsms_image_link, 
 		.cmsms_open_link {
-			.ovh;
-			.pos_abs(52px, 52px);
-			.op(0);
+			@include ovh;
+			@include pos_abs(52px, 52px);
+			@include op(0);
 		}
 		
 		.cmsms_image_link, 
@@ -1123,13 +1132,13 @@ audio.full-width {
 			position:absolute;
 			left:0;
 			top:0;
-			.op(0);
+			@include op(0);
 		}
 	}
 }
 
 p {
-	padding:0 0 @line_height_pad;
+	padding:0 0 $line_height_pad;
 	margin:0;
 }
 
@@ -1140,7 +1149,7 @@ h4,
 h5, 
 h6 {
 	padding:0;
-	margin:0 0 @line_height_pad;
+	margin:0 0 $line_height_pad;
 }
 
 h1 a, 
@@ -1158,62 +1167,62 @@ h6 a {
 
 .alignleft, 
 .fl {
-	.fl;
+	@include fl;
 }
 
 .alignright, 
 .fr {
-	.fr;
+	@include fr;
 }
 
 img {
 	&.alignleft, 
 	&.fl {
 		margin-right:40px;
-		margin-bottom:@line_height_pad;
+		margin-bottom:$line_height_pad;
 	}
 	
 	&.alignright, 
 	&.fr {
 		margin-left:40px;
-		margin-bottom:@line_height_pad;
+		margin-bottom:$line_height_pad;
 	}
 	
 	&.aligncenter {
-		margin:0 auto @line_height_pad;
+		margin:0 auto $line_height_pad;
 	}
 	
 	&.alignnone {
-		margin-bottom:@line_height_pad;
+		margin-bottom:$line_height_pad;
 	}
 }
 
 .dn {
-	.dn;
+	@include dn;
 }
 
 .tal, 
 .ta_left {
-	.tal;
+	@include tal;
 }
 
 .tac, 
 .ta_center {
-	.tac;
+	@include tac;
 }
 
 .tar, 
 .ta_right {
-	.tar;
+	@include tar;
 }
 
 .cl, 
 .clear {
-	.cl;
+	@include cl;
 }
 
 .ovh {
-	.ovh;
+	@include ovh;
 }
 
 .low_case {
@@ -1233,7 +1242,7 @@ img {
 hr {
 	border:0;
 	border-top-style:solid;
-	margin:(@line_height_pad * 2) 0;
+	margin:($line_height_pad * 2) 0;
 }
 
 hr, 
@@ -1248,8 +1257,8 @@ hr,
 }
 
 .cmsms_widget_divider {
-	margin:0 @col_mar @line_height_pad;
-	width:round(100% - (@col_mar * 2), 2);
+	margin:0 $col_mar $line_height_pad;
+	width:round(100% - ($col_mar * 2), 2);
 }
 
 .cmsms_widget_divider {
@@ -1285,7 +1294,7 @@ hr,
 .cmsms_video_wrap {
 	width:100%;
 	height:0;
-	padding-bottom:@resp_blocks_pad;
+	padding-bottom:$resp_blocks_pad;
 	position:relative;
 	overflow:hidden;
 	max-width:100%;
@@ -1337,50 +1346,50 @@ hr,
 .one_sixth {
 	position:relative;
 	float:left;
-	margin:0 @col_mar;
+	margin:0 $col_mar;
 }
 
 .one_sixth {
-	width:round((100% / 6) - (@col_mar * 2), 2);
+	width:round((100% / 6) - ($col_mar * 2), 2);
 }
 
 .one_fifth {
-	width:round((100% / 5) - (@col_mar * 2), 2);
+	width:round((100% / 5) - ($col_mar * 2), 2);
 }
 
 .one_fourth {
-	width:round((100% / 4) - (@col_mar * 2), 2);
+	width:round((100% / 4) - ($col_mar * 2), 2);
 }
 
 .one_third {
-	width:round((100% / 3) - (@col_mar * 2), 2);
+	width:round((100% / 3) - ($col_mar * 2), 2);
 }
 
 .one_half {
-	width:round((100% / 2) - (@col_mar * 2), 2);
+	width:round((100% / 2) - ($col_mar * 2), 2);
 }
 
 .two_third {
-	width:round(((100% * 2) / 3) - (@col_mar * 2), 2);
+	width:round(((100% * 2) / 3) - ($col_mar * 2), 2);
 }
 
 .three_fourth {
-	width:round(((100% * 3) / 4) - (@col_mar * 2), 2);
+	width:round(((100% * 3) / 4) - ($col_mar * 2), 2);
 }
 
 .one_first {
-	width:round(100% - (@col_mar * 2), 2);
+	width:round(100% - ($col_mar * 2), 2);
 	position:relative;
 	float:none;
 	clear:both;
 }
 
 [data-animation] {
-	.op(0);
+	@include op(0);
 }
 
 [data-animation].animated {
-	.op(1);
+	@include op(1);
 }
 
 .meta_wrap {
@@ -1412,7 +1421,7 @@ hr,
 .social_wrap {
 	display:block;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	ul {
 		display:block;
@@ -1444,7 +1453,7 @@ hr,
 .search_wrap {
 	display:block;
 	position:relative;
-	.ovh;
+	@include ovh;
 }
 
 .resp_nav_wrap_inner, 
@@ -1515,7 +1524,7 @@ nav {
 				top:100%;
 				z-index:203;
 				opacity:0;
-				.bdbx;
+				@include bdbx;
 				
 				ul {
 					left:auto;
@@ -1544,7 +1553,7 @@ nav {
 				display:block;
 				position:relative;
 				z-index:204;
-				.bdbx;
+				@include bdbx;
 			}
 		}
 	}
@@ -1582,7 +1591,7 @@ nav {
 			-webkit-border-radius:50%;
 			border-radius:50%;
 			position: relative;
-			.trans(all .4s ease);
+			transition:all .4s ease;			
 			&[class^="cmsms-icon-"]:before, 
 			&[class*=" cmsms-icon-"]:before, 
 			&[class^="cmsms_theme_icon_"]:before, 
@@ -1608,7 +1617,7 @@ nav {
 			> div {
 				> ul {
 					ul {
-						margin:@dropdown_anim_pad 0 0;
+						margin:$dropdown_anim_pad 0 0;
 						padding: 15px 0;
 						
 						li {
@@ -1617,7 +1626,7 @@ nav {
 						}
 						
 						ul {
-							margin:-15px 0 0 @dropdown_anim_pad;
+							margin:-15px 0 0 $dropdown_anim_pad;
 						}
 					}
 				}
@@ -1659,15 +1668,15 @@ nav {
 				}
 				
 				ul {
-					margin:@dropdown_anim_pad 0 0;
-					padding: 15px 0px;
+					margin:$dropdown_anim_pad 0 0;
+					padding: 27px 0px;
 					
 					ul {
-						margin:-15px 0 0 @dropdown_anim_pad;
+						margin:-15px 0 0 $dropdown_anim_pad;
 					}
 					
 					li {
-						padding: 0 15px;
+						padding: 0 20px 0 30px;
 						margin-top: 3px;
 						
 						&:first-child {
@@ -1708,7 +1717,7 @@ nav {
 				
 				> li.menu-item-dropdown-right {
 					ul ul {
-						margin:-15px @dropdown_anim_pad 0 0;
+						margin:-15px $dropdown_anim_pad 0 0;
 					}
 				}
 				
@@ -1749,7 +1758,7 @@ nav {
 						display:block;
 						width:auto;
 						padding:20px 25px;
-						margin:@dropdown_anim_pad 0 0;
+						margin:$dropdown_anim_pad 0 0;
 						visibility:hidden;
 						overflow:hidden;
 						position:absolute;
@@ -1788,7 +1797,7 @@ nav {
 								a:empty {
 									padding:0;
 									margin:0;
-									.dn;
+									@include dn;
 								}
 								
 								> ul > li {
@@ -1802,7 +1811,7 @@ nav {
 									&.current-menu-item > a, 
 									&.current-menu-ancestor > a:hover, 
 									&.menu-item-highlight > a {
-										padding-left:@blocks_hor_pad * 0.5;
+										padding-left:$blocks_hor_pad * 0.5;
 									}
 									
 									li {
@@ -1810,126 +1819,126 @@ nav {
 										&:hover > a, 
 										> a {
 											width:auto;
-											padding-left:@blocks_hor_pad * 0.5;
+											padding-left:$blocks_hor_pad * 0.5;
 										}
 										
 										> a:hover, 
 										&.current-menu-item > a, 
 										&.current-menu-ancestor > a:hover, 
 										&.menu-item-highlight > a {
-											padding-left:@blocks_hor_pad;
+											padding-left:$blocks_hor_pad;
 										}
 										
 										li {
 											&.current-menu-ancestor > a, 
 											&:hover > a, 
 											> a {
-												padding-left:@blocks_hor_pad * 1;
+												padding-left:$blocks_hor_pad * 1;
 											}
 											
 											> a:hover, 
 											&.current-menu-item > a, 
 											&.current-menu-ancestor > a:hover, 
 											&.menu-item-highlight > a {
-												padding-left:@blocks_hor_pad * 1.5;
+												padding-left:$blocks_hor_pad * 1.5;
 											}
 											
 											li {
 												&.current-menu-ancestor > a, 
 												&:hover > a, 
 												> a {
-													padding-left:@blocks_hor_pad * 1.5;
+													padding-left:$blocks_hor_pad * 1.5;
 												}
 												
 												> a:hover, 
 												&.current-menu-item > a, 
 												&.current-menu-ancestor > a:hover, 
 												&.menu-item-highlight > a {
-													padding-left:@blocks_hor_pad * 2;
+													padding-left:$blocks_hor_pad * 2;
 												}
 												
 												li {
 													&.current-menu-ancestor > a, 
 													&:hover > a, 
 													> a {
-														padding-left:@blocks_hor_pad * 2;
+														padding-left:$blocks_hor_pad * 2;
 													}
 													
 													> a:hover, 
 													&.current-menu-item > a, 
 													&.current-menu-ancestor > a:hover, 
 													&.menu-item-highlight > a {
-														padding-left:@blocks_hor_pad * 2.5;
+														padding-left:$blocks_hor_pad * 2.5;
 													}
 													
 													li {
 														&.current-menu-ancestor > a, 
 														&:hover > a, 
 														> a {
-															padding-left:@blocks_hor_pad * 2.5;
+															padding-left:$blocks_hor_pad * 2.5;
 														}
 														
 														> a:hover, 
 														&.current-menu-item > a, 
 														&.current-menu-ancestor > a:hover, 
 														&.menu-item-highlight > a {
-															padding-left:@blocks_hor_pad * 3;
+															padding-left:$blocks_hor_pad * 3;
 														}
 														
 														li {
 															&.current-menu-ancestor > a, 
 															&:hover > a, 
 															> a {
-																padding-left:@blocks_hor_pad * 3;
+																padding-left:$blocks_hor_pad * 3;
 															}
 															
 															> a:hover, 
 															&.current-menu-item > a, 
 															&.current-menu-ancestor > a:hover, 
 															&.menu-item-highlight > a {
-																padding-left:@blocks_hor_pad * 3.5;
+																padding-left:$blocks_hor_pad * 3.5;
 															}
 															
 															li {
 																&.current-menu-ancestor > a, 
 																&:hover > a, 
 																> a {
-																	padding-left:@blocks_hor_pad * 3.5;
+																	padding-left:$blocks_hor_pad * 3.5;
 																}
 																
 																> a:hover, 
 																&.current-menu-item > a, 
 																&.current-menu-ancestor > a:hover, 
 																&.menu-item-highlight > a {
-																	padding-left:@blocks_hor_pad * 4;
+																	padding-left:$blocks_hor_pad * 4;
 																}
 																
 																li {
 																	&.current-menu-ancestor > a, 
 																	&:hover > a, 
 																	> a {
-																		padding-left:@blocks_hor_pad * 4;
+																		padding-left:$blocks_hor_pad * 4;
 																	}
 																	
 																	> a:hover, 
 																	&.current-menu-item > a, 
 																	&.current-menu-ancestor > a:hover, 
 																	&.menu-item-highlight > a {
-																		padding-left:@blocks_hor_pad * 4.5;
+																		padding-left:$blocks_hor_pad * 4.5;
 																	}
 																	
 																	li {
 																		&.current-menu-ancestor > a, 
 																		&:hover > a, 
 																		> a {
-																			padding-left:@blocks_hor_pad * 4.5;
+																			padding-left:$blocks_hor_pad * 4.5;
 																		}
 																		
 																		> a:hover, 
 																		&.current-menu-item > a, 
 																		&.current-menu-ancestor > a:hover, 
 																		&.menu-item-highlight > a {
-																			padding-left:@blocks_hor_pad * 5;
+																			padding-left:$blocks_hor_pad * 5;
 																		}
 																	}
 																}
@@ -1943,7 +1952,7 @@ nav {
 								}
 								
 								> ul {
-									width:@dropdown_width;
+									width:$dropdown_width;
 								}
 							}
 						}
@@ -1992,7 +2001,7 @@ nav {
 	.header_side,
 	.header_side_inner {
 		position: fixed;
-		right: @main_padd;
+		right: $main_padd;
 		overflow: hidden;
 		z-index: 9997;
 		
@@ -2005,7 +2014,7 @@ nav {
 	.header_side_inner {
 		.header_side_top_side {
 			white-space: nowrap;
-			padding: 0 @header_side_side_pad;
+			padding: 0 $header_side_side_pad;
 			border-bottom-width: 1px;
 			border-bottom-style: solid;
 			position: absolute;
@@ -2021,7 +2030,7 @@ nav {
 				vertical-align : middle;
 				
 				.search_wrap_inner {
-					height: @header_side_top_side;
+					height: $header_side_top_side;
 					.search_wrap_inner_left {
 						height:100%;
 					}
@@ -2031,8 +2040,8 @@ nav {
 					display: block;
 					padding:0;
 					height: auto;
-					.bd(0);
-					.bdrs(0px);
+					@include bd(0);
+					@include bdrs(0px);
 					
 					form {
 						margin:0;
@@ -2040,7 +2049,7 @@ nav {
 						p {
 							height:44px;
 							position:relative;
-							.ovh;
+							@include ovh;
 							
 							&.search_field {
 								position: fixed;
@@ -2063,7 +2072,7 @@ nav {
 									width: 100%;
 									margin-top: -50px;
 									text-align: center;
-									.bd(0);
+									@include bd(0);
 								}
 							}
 							
@@ -2131,14 +2140,14 @@ nav {
 		.header_side_middle_side {
 			white-space: nowrap;
 			height: 100%;
-			padding-top: @header_side_side_pad;
-			padding-left: @header_side_side_pad;
+			padding-top: $header_side_side_pad;
+			padding-left: $header_side_side_pad;
 			padding-right: 15px;
 			z-index: 9998;
 		}
 		
 		.header_side_top_side.cmsms_with_cont + .header_side_middle_side {
-			padding-top: @header_side_top_side + @header_side_side_pad;
+			padding-top: $header_side_top_side + $header_side_side_pad;
 		}
 		
 		.cmsms_wrap_header_side_mid {
@@ -2148,7 +2157,7 @@ nav {
 		
 		.header_side_bottom_side {
 			opacity: 0;
-			padding: 0 @header_side_side_pad;
+			padding: 0 $header_side_side_pad;
 			z-index: 9999;
 			
 			&.cmsms_visible {
@@ -2339,7 +2348,7 @@ nav {
 #footer, 
 .headline_inner, 
 .cmsms_breadcrumbs_inner {
-	.ovh;
+	@include ovh;
 }
 
 #page, 
@@ -2347,7 +2356,7 @@ nav {
 .middle_inner, 
 .middle_content {
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 }
 
@@ -2355,7 +2364,7 @@ nav {
 .header_mid_outer, 
 .header_side_outer {
 	position:relative;
-	.bdbx;
+	@include bdbx;
 }
 
 .post-password-form,
@@ -2365,10 +2374,10 @@ nav {
 .bottom_outer,  
 .cmsms_row_inner {
 	position:relative;
-	width:@cont_width_def;
+	width:$cont_width_def;
 	padding:0 20px;
-	.m0a;
-	.bdbx;
+	@include m0a;
+	@include bdbx;
 }
 
 .header_top_inner, 
@@ -2391,17 +2400,17 @@ nav {
 	.cmsms_row_inner {
 		&.cmsms_row_fullwidth {
 			width:100%;
-			padding:0 @blocks_hor_pad * 2;
+			padding:0 $blocks_hor_pad * 2;
 		}
 	}
 	
 	.cmsms_row_overlay {
-		.fullwidth_in_block;
+		@include fullwidth_in_block;
 	}
 }
 
 .cmsms_row_margin {
-	margin:0 -@col_mar - 0.07;
+	margin:0 -$col_mar - 0.07;
 	position:relative;
 }
 
@@ -2410,7 +2419,7 @@ nav {
 	&.l_sidebar, 
 	.opened-article {
 		.cmsms_row {
-			.ctbx;
+			@include ctbx;
 			
 			.cmsms_row_inner {
 				width:100%;
@@ -2431,7 +2440,7 @@ nav {
 .cmsms_row_inner:after, 
 .cmsms_row_margin:after, 
 .cmsms_column:after {
-	.cl_after;
+	@include cl_after;
 }
 
 #header {
@@ -2439,22 +2448,22 @@ nav {
 	
 	.header_top_close_but, 
 	.header_top_but {
-		.dn;
+		@include dn;
 	}
 	
 	.header_top_inner {
-		.bdbx;
+		@include bdbx;
 		
 		.responsive_top_nav {
-			.dn;
+			@include dn;
 		}
 		
 		.header_top_left {
-			.ovh;
+			@include ovh;
 		}
 		
 		.header_top_right {
-			.fr;
+			@include fr;
 		}
 	}
 	
@@ -2489,42 +2498,42 @@ nav {
 }
 
 .content {
-	width:@content_width;
-	padding:60px 0 @cont_vert_pad 0;
+	width:$content_width;
+	padding:60px 0 $cont_vert_pad 0;
 	position:relative;
-	.fl;
-	.bdbx;
+	@include fl;
+	@include bdbx;
 	
 	&.fr {
-		.fr;
+		@include fr;
 	}
 }
 
 .sidebar {
-	width:@sidebar_width;
-	padding:60px 0 @cont_vert_pad 30px;
+	width:$sidebar_width;
+	padding:60px 0 $cont_vert_pad 30px;
 	position:relative;
-	.fr;
-	.bdbx;
+	@include fr;
+	@include bdbx;
 	
 	&.fl {
-		padding:60px 30px @cont_vert_pad 0;
-		.fl;
+		padding:60px 30px $cont_vert_pad 0;
+		@include fl;
 	}
 }
 
 .bottom_bg {
 	padding-top:40px;
-	padding-bottom:40px - @line_height_pad;
+	padding-bottom:40px - $line_height_pad;
 }
 
 .bottom_inner {
-	margin:0 -@col_mar;
+	margin:0 -$col_mar;
 	
 	aside {
 		position:relative;
 		float:left;
-		margin:0 @col_mar;
+		margin:0 $col_mar;
 	}
 }
 
@@ -2621,6 +2630,8 @@ nav {
 /* Special Heading global styles */
 .cmsms_heading_wrap {
 	position:relative;
+	overflow:hidden;
+	
 	.cmsms_heading_divider {
 		display:inline-block;
 		height:2px;
@@ -2692,7 +2703,7 @@ nav {
 	padding:0 30px;
 	margin-bottom: 30px;
 	position:relative;
-	.bdbx;
+	@include bdbx;
 	
 	&[class*=" cmsms-icon-"], 
 	&[class*=" cmsms_theme_icon_"] {
@@ -2718,7 +2729,7 @@ nav {
 		display:table-cell;
 		position:relative;
 		vertical-align:middle;
-		padding:@line_height_pad 0 0;
+		padding:$line_height_pad 0 0;
 	}
 	
 	.notice_close {
@@ -2748,10 +2759,10 @@ nav {
 		}
 		
 		.icon_box_inner {
-			.tac;
+			@include tac;
 			
 			.icon_box_text {
-				.tac;
+				@include tac;
 			}
 		}
 	}
@@ -2784,13 +2795,13 @@ nav {
 /* Featured Block global styles */
 .cmsms_featured_block {
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.featured_block_inner {
 		width:100%;
 		padding:20px 20px 0;
 		position:relative;
-		.ovh;
+		@include ovh;
 	}
 }
 
@@ -2832,7 +2843,7 @@ nav {
 			display:none;
 			
 			&:after {
-				.cl_after;
+				@include cl_after;
 			}
 		}
 		
@@ -2856,7 +2867,7 @@ nav {
 	position:relative;
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	.cmsms_tabs_list {
@@ -2866,7 +2877,7 @@ nav {
 		position:relative;
 		
 		/*&:after {
-			.cl_after;
+			@include cl_after;
 		}*/
 		
 		.cmsms_tabs_list_item {
@@ -2886,13 +2897,13 @@ nav {
 	
 	.cmsms_tabs_wrap {
 		position:relative;
-		.ovh;
+		@include ovh;
 		
 		.cmsms_tab {
 			display:none;
 			
 			&:after {
-				.cl_after;
+				@include cl_after;
 			}
 			
 			&.active_tab {
@@ -2904,7 +2915,7 @@ nav {
 	&.tabs_mode_tour {
 		.cmsms_tabs_list {
 			float:left;
-			.bdbx;
+			@include bdbx;
 			
 			.cmsms_tabs_list_item {
 				float:none;
@@ -2913,7 +2924,7 @@ nav {
 		
 		.cmsms_tabs_wrap {
 			float:right;
-			.bdbx;
+			@include bdbx;
 		}
 		
 		&.tabs_pos_right {
@@ -2945,7 +2956,7 @@ nav {
 			width:100%;
 			padding:0 0 50px;
 			position:relative;
-			.ovh;
+			@include ovh;
 			
 			&:before {
 				content:'';
@@ -2959,7 +2970,7 @@ nav {
 			}
 			
 			&:after {
-				.cl_after;
+				@include cl_after;
 			}
 			
 			&:last-child {
@@ -2979,7 +2990,7 @@ nav {
 		}
 		
 		.cmsms_icon_list_item_content {
-			.ovh;
+			@include ovh;
 		}
 		
 		&.cmsms_icon_list_pos_left {
@@ -2993,7 +3004,7 @@ nav {
 			
 			.cmsms_icon_list_icon_wrap {
 				float:left;
-				padding-right:@cont_vert_pad;
+				padding-right:$cont_vert_pad;
 			}
 		}
 		
@@ -3008,7 +3019,7 @@ nav {
 			
 			.cmsms_icon_list_icon_wrap {
 				float:right;
-				padding-left:@cont_vert_pad;
+				padding-left:$cont_vert_pad;
 			}
 		}
 	}
@@ -3018,10 +3029,10 @@ nav {
 /* Stats global styles */
 .cmsms_stats {
 	position:relative;
-	.tac;
+	@include tac;
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	.cmsms_stat_wrap {
@@ -3031,7 +3042,7 @@ nav {
 			.cmsms_stat_inner {
 				display:block;
 				position:relative;
-				.bdbx;
+				@include bdbx;
 			}
 		}
 	}
@@ -3039,7 +3050,7 @@ nav {
 	&.stats_mode_bars {
 		.cmsms_stat_wrap {
 			.cmsms_stat {
-				.ovh;
+				@include ovh;
 				
 				.cmsms_stat_inner {
 					&[class^="cmsms-icon-"], 
@@ -3059,7 +3070,7 @@ nav {
 				}
 				
 				canvas {
-					.dn;
+					@include dn;
 				}
 			}
 		}
@@ -3081,7 +3092,7 @@ nav {
 			float:none;
 			margin:0 0 40px 0;
 			vertical-align:top;
-			.tac;
+			@include tac;
 			
 			&.one_fifth {
 				width:20%;
@@ -3104,17 +3115,17 @@ nav {
 			}
 			
 			.cmsms_stat {
-				margin:0 0 @line_height_pad;
+				margin:0 0 $line_height_pad;
 				
 				.cmsms_stat_inner {
 					position:absolute;
 					z-index:2;
-					.bdrs(50%);
-					.tac;
+					@include bdrs(50%);
+					@include tac;
 					
 					.cmsms_stat_counter_wrap {
 						display:block;
-						.tac;
+						@include tac;
 					}
 				}
 				
@@ -3131,7 +3142,7 @@ nav {
 			.cmsms_stat_title, 
 			.cmsms_stat_subtitle {
 				display:block;
-				.tac;
+				@include tac;
 			}
 		}
 	}
@@ -3139,14 +3150,14 @@ nav {
 
 .cmsms_counters {
 	position:relative;
-	.tac;
+	@include tac;
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	canvas {
-		.dn;
+		@include dn;
 	}
 	
 	.cmsms_counter_wrap {
@@ -3154,7 +3165,7 @@ nav {
 		float:none;
 		margin:0;
 		vertical-align:top;
-		.tac;
+		@include tac;
 		
 		.cmsms_counter_counter_wrap {
 			padding-bottom: 13px;
@@ -3182,12 +3193,12 @@ nav {
 	
 		.cmsms_counter {
 			position:relative;
-			margin:0 0 @line_height_pad;
+			margin:0 0 $line_height_pad;
 			
 			.cmsms_counter_inner {
 				display:block;
 				position:relative;
-				.bdbx;
+				@include bdbx;
 			}
 		}
 	}
@@ -3195,16 +3206,16 @@ nav {
 	&.counters_type_vertical {
 		.cmsms_counter_wrap {
 			.cmsms_counter {
-				.tac;
+				@include tac;
 				
 				.cmsms_counter_inner {
-					.tac;
+					@include tac;
 				}
 			}
 		
 			.cmsms_counter_subtitle {
 				display:block;
-				.tac;
+				@include tac;
 			}
 		}
 	}
@@ -3212,7 +3223,7 @@ nav {
 
 .widget {
 	position:relative;
-	padding:0 0 @line_height_pad;
+	padding:0 0 $line_height_pad;
 	
 	.widgettitle {
 		margin-bottom:25px;
@@ -3245,7 +3256,7 @@ nav {
 			}
 			
 			&:before {
-				.fl;
+				@include fl;
 			}
 		}
 	}
@@ -3261,7 +3272,7 @@ nav {
 	&.widget_recent_entries {
 		ul {
 			li {
-				.ovh;
+				@include ovh;
 				
 				> span {
 					float: left;
@@ -3360,12 +3371,12 @@ nav {
 	width:100%;
 	position:relative;
 	-ms-touch-action:pan-y;
-	.dn;
+	@include dn;
 	
 	.owl-wrapper-outer {
 		width:100%;
 		position:relative;
-		.ovh;
+		@include ovh;
 	
 		&.autoHeight {
 			-webkit-transition:height .5s ease-in-out;
@@ -3377,7 +3388,7 @@ nav {
 	
 		.owl-wrapper {
 			position:relative;
-			.dn;
+			@include dn;
 			
 			&:after {
 				content:'.';
@@ -3385,11 +3396,11 @@ nav {
 				display:block;
 				height:0;
 				visibility:hidden;
-				.cl;
+				@include cl;
 			}
 		
 			.owl-item {
-				.fl;
+				@include fl;
 			}
 		}
 		
@@ -3434,7 +3445,7 @@ nav {
 		margin-left:10px;
 		text-indent:-9999px;
 		cursor:pointer;
-		.bdrs(50%);
+		@include bdrs(50%);
 		
 		&.active {
 			cursor:default;
@@ -3469,10 +3480,10 @@ nav {
 		}
 		
 		li {
-			width:@dropdown_width;
+			width:$dropdown_width;
 			&:first-child {
 				> a {
-					.bdt(0);
+					@include bdt(0);
 					margin-top:1px;
 				}
 				
@@ -3482,7 +3493,7 @@ nav {
 			}
 			
 			> a {
-				.ovh;
+				@include ovh;
 				padding-bottom: 2px;
 				
 				&[data-tag] {
@@ -3498,7 +3509,7 @@ nav {
 					
 					> span {
 						width:auto;
-						.fl;
+						@include fl;
 					}
 				}
 			}
@@ -3515,7 +3526,7 @@ nav {
 		&.menu-item-hide-text {
 			> a {
 				span[class^="cmsms-icon-"]:before {
-					margin:0 .3em;
+					margin:0 @include 3em;
 				}
 			}
 		}
@@ -3536,7 +3547,7 @@ nav {
 					position:relative;
 					z-index:206;
 					letter-spacing: 2px;
-					.fr;
+					@include fr;
 				}
 			}
 			
@@ -3582,15 +3593,15 @@ nav {
 			
 			> div.menu-item-mega-container {
 				> ul {
-					padding-top:@line_height_pad / 2;
-					margin-top:@line_height_pad / 2;
+					padding-top:$line_height_pad / 2;
+					margin-top:$line_height_pad / 2;
 					
 					&:after {
 						content:'';
 						display:block;
 						width:150%;
 						height:1px;
-						margin-left:-@blocks_hor_pad;
+						margin-left:-$blocks_hor_pad;
 						position:absolute;
 						top:0;
 						left:0;
@@ -3607,7 +3618,7 @@ nav {
 					
 					> li {
 						> a {
-							.bdt(0);
+							@include bdt(0);
 							
 							> span {
 								> span.nav_subtitle {
@@ -3665,7 +3676,7 @@ nav {
 						
 						&.menu-item-hide-text {
 							> a {
-								.tac;
+								@include tac;
 								
 								> span {
 									&:before {
@@ -3680,7 +3691,7 @@ nav {
 						li.menu-item-mega-description {
 							span.menu-item-mega-description-container {
 								display:block;
-								padding:@line_height_pad / 2 @blocks_hor_pad / 2;
+								padding:$line_height_pad / 2 $blocks_hor_pad / 2;
 							}
 						}
 					}
@@ -3705,7 +3716,7 @@ nav {
 	width:20px;
 	height:15px;
 	position:relative;
-	.bdb(3px);
+	@include bdb(3px);
 	
 	&:before,
 	&:after {
@@ -3723,7 +3734,7 @@ nav {
 }
 
 .header_top_inner {
-	height:@header_top_height;
+	height:$header_top_height;
 	
 	nav > div > ul {
 		z-index:205;
@@ -3751,21 +3762,21 @@ nav {
 			}
 			
 			a {
-				.color_white_opacity(.5);
+				@include color_white_opacity(.5);
 			}
 			
 			ul {
 				top:100%;
 				li {
-				width:@dropdown_width_top;
+				width:$dropdown_width_top;
 					&:first-child {
-						.bdt(0);
+						@include bdt(0);
 						padding:0;
 					}
 					
 					> a {
 						padding:0;
-						.bdbx;
+						@include bdbx;
 						display: inline;
 					}
 				}
@@ -3790,10 +3801,10 @@ nav {
 	}
 	
 	.meta_wrap {
-		.color_white_opacity(.5);
+		@include color_white_opacity(.5);
 		
 		a {
-			.color_white_opacity(.5);
+			@include color_white_opacity(.5);
 		}
 		
 		> * {
@@ -3897,8 +3908,7 @@ nav {
 	}
 }
 
-.header_mid_inner {	
-	margin-top: 30px;
+.header_mid_inner {
 	.header_right_wrap {
 		float: right;
 		padding-right: 20px;
@@ -3923,12 +3933,8 @@ nav {
 			> li {
 				> a {
 					border:0;
-					padding:0 15px;
-					text-transform: uppercase;
-					color: #FFF;
-					font-weight: 400;
-					font-size: 18px;
-					.trans(all .3s ease);
+					padding:0 20px;
+					
 					> span {
 						display:inline-block;
 						padding:0;
@@ -3938,9 +3944,6 @@ nav {
 						> span.nav_subtitle {
 							display:block;
 						}
-					}
-					&:hover{
-						opacity:.7;
 					}
 				}	
 				
@@ -4045,8 +4048,8 @@ nav {
 				height:44px;
 				padding:0;
 				margin-top:6px;
-				.bd(0);
-				.bdrs(0px);
+				@include bd(0);
+				@include bdrs(0px);
 				
 				form {
 					margin:0;
@@ -4055,7 +4058,7 @@ nav {
 						height:44px;
 						width: 20px;
 						position:relative;
-						.ovh;
+						@include ovh;
 						
 						&.search_field {
 							position: fixed;
@@ -4079,7 +4082,7 @@ nav {
 								width: 100%;
 								margin-top: -50px;
 								text-align: center;
-								.bd(0);
+								@include bd(0);
 							}
 						}
 						
@@ -4120,7 +4123,7 @@ nav {
 						
 						&.search_button {
 							position: fixed;
-							right: @main_padd;
+							right: $main_padd;
 							z-index: 9999;
 							
 							button {
@@ -4147,7 +4150,7 @@ nav {
 		float:left;
 		visibility:visible;
 		text-indent:inherit;
-		.op(1);
+		@include op(1);
 		
 		&.resp_nav_closed, 
 		&.slogan_closed, 
@@ -4155,7 +4158,7 @@ nav {
 			margin-right:0;
 			visibility:hidden;
 			text-indent:-9999px;
-			.op(0);
+			@include op(0);
 		}
 	}
 	
@@ -4166,11 +4169,11 @@ nav {
 		
 		img {
 			max-height:100%;
-			.pos_abs(auto, auto, 0, auto);
+			@include pos_abs(auto, auto, 0, auto);
 		}
 		
 		.logo_retina {
-			.dn;
+			@include dn;
 		}
 	}
 }
@@ -4184,7 +4187,7 @@ nav {
 .header_mid .header_mid_inner nav > div > ul > li > a, 
 .header_mid .header_mid_inner .logo, 
 .header_mid .header_mid_inner .resp_nav_wrap_inner {
-	height:@header_mid_height;
+	height:$header_mid_height;
 }
 
 /***************** Elements ******************/
@@ -4214,7 +4217,7 @@ nav {
 	width:100%;
 	height:52px;
 	padding:0;
-	.bdbx;
+	@include bdbx;
 	
 	form {
 		display:table;
@@ -4246,7 +4249,7 @@ nav {
 					padding:0;
 					min-width:0;
 					cursor:pointer;
-					.bd(0);
+					@include bd(0);
 					
 					&:before {
 						font-size:18px;
@@ -4272,7 +4275,7 @@ nav {
 .cmsms_prev_arrow_pixel,
 .cmsms_next_arrow_pixel {
 	background:transparent;
-	.pos_abs(1px, 1px, 0, auto);
+	@include pos_abs(1px, 1px, 0, auto);
 
 	&:before, 
 	&:after, 
@@ -4282,8 +4285,8 @@ nav {
 		background:transparent;
 		position:absolute;
 		width:1px;
-		.bdt;
-		.bdb;
+		@include bdt;
+		@include bdb;
 	}
 	
 	&:before {
@@ -4339,7 +4342,7 @@ nav {
 .cmsms_top_arrow_pixel, 
 .cmsms_bot_arrow_pixel {
 	background:#000000;
-	.pos_abs(1px, 1px, 0, 0, -4px);
+	@include pos_abs(1px, 1px, 0, 0, -4px);
 
 	&:before, 
 	&:after, 
@@ -4349,8 +4352,8 @@ nav {
 		background:transparent;
 		position:absolute;
 		height:1px;
-		.bdl;
-		.bdr;
+		@include bdl;
+		@include bdr;
 	}
 
 	&:before {
@@ -4416,7 +4419,7 @@ body .headline {
 	position:relative;
 	margin-bottom: 30px;
 	width: 100%;
-	.ovh;
+	@include ovh;
 	
 	.cmsms_breadcrumbs_inner {
 		display:inline-block;
@@ -4459,7 +4462,7 @@ body .headline {
 			position:relative;
 			
 			&:before {
-				.pos_abs(1em, 1em, 0, 0, 0, auto);
+				@include pos_abs(1em, 1em, 0, 0, 0, auto);
 				vertical-align:middle;
 			}
 			
@@ -4473,10 +4476,10 @@ body .headline {
 		}
 		
 		&.align_left {
-			.tal;
+			@include tal;
 			
 			.headline_text {
-				.tal;
+				@include tal;
 				
 				&:before {
 					right:auto;
@@ -4489,10 +4492,10 @@ body .headline {
 		}
 		
 		&.align_right {
-			.tar;
+			@include tar;
 			
 			.headline_text {
-				.tar;
+				@include tar;
 				
 				&:before {
 					left:auto;
@@ -4505,10 +4508,10 @@ body .headline {
 		}
 		
 		&.align_center {
-			.tac;
+			@include tac;
 			
 			.headline_text {
-				.tac;
+				@include tac;
 				
 				&:before {
 					bottom:auto;
@@ -4516,7 +4519,7 @@ body .headline {
 			}
 			
 			.cmsms_breadcrumbs {
-				.tac;
+				@include tac;
 				
 				.cmsms_breadcrumbs_aligner {
 					display:none;
@@ -4532,7 +4535,7 @@ body .headline {
 }
 
 .error {
-	.ovh;
+	@include ovh;
 	
 	.search_bar_wrap {
 		margin:0 auto 40px;
@@ -4579,21 +4582,21 @@ body .headline {
 
 /***************** Footer ******************/
 .footer_inner {
-	.tal;
-	.ovh;
+	@include tal;
+	@include ovh;
 	display: table;
 	
 	nav {
 		margin:0;
 		display: table-cell;
 		vertical-align: middle;
-		.ovh;
+		@include ovh;
 		width: 50%;
 		padding-left: 15px;
 		
 		ul {
-			.fr;
-			.ovh;
+			@include fr;
+			@include ovh;
 			
 			li {
 				display: inline-block;
@@ -4607,7 +4610,7 @@ body .headline {
 	}
 	
 	.footer_custom_html {
-		.tar;
+		@include tar;
 		width: 50%;
 		overflow: hidden;
 		display: table-cell;
@@ -4631,7 +4634,7 @@ body .headline {
 	.copyright {
 		padding-right: 15px;
 		width: 50%;
-		.ovh;
+		@include ovh;
 		display: table-cell;
 		vertical-align: middle;
 	}
@@ -4643,7 +4646,7 @@ body .headline {
 		vertical-align: middle;
 		
 		.social_wrap_inner {
-			.fr;
+			@include fr;
 		}
 	}
 }
@@ -4683,10 +4686,10 @@ input[type=button],
 button {
 	display:inline-block;
 	padding:10px 20px;
-	.bd(2px);
-	.tac;
-	.bdbx;
-	.bdrs(2px);
+	@include bd(2px);
+	@include tac;
+	@include bdbx;
+	@include bdrs(2px);
 }
 
 .cmsms_search_post_comments, 
@@ -4700,7 +4703,7 @@ button {
 .cmsms_post_comments {
 	display:inline-block;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	&:before {
 		float:right;
@@ -4722,11 +4725,11 @@ button {
 	margin-bottom:40px;
 	padding:10px 0;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.cmsms_post_filter {
-		.ovh;
-		.tac;
+		@include ovh;
+		@include tac;
 		
 		.cmsms_post_filter_block {
 			display: inline-block;
@@ -4735,8 +4738,8 @@ button {
 			.cmsms_post_filter_list {
 				margin:0;
 				padding:0 20px;
-				.tac;
-				.ovh;
+				@include tac;
+				@include ovh;
 				
 				li {
 					display:inline-block;
@@ -4745,7 +4748,7 @@ button {
 					
 					&.current {
 						a.button {
-							.bdb(1px);
+							@include bdb(1px);
 						}
 					}
 					
@@ -4763,7 +4766,7 @@ button {
 					
 					> a.button {
 						padding: 0;
-						.bd(0);
+						@include bd(0);
 						border-radius: 0;
 					}
 				}
@@ -4774,13 +4777,13 @@ button {
 
 .cmsms_wrap_more_posts {
 	width:100%;
-	.ovh;
+	@include ovh;
 }
 
 .cmsms_wrap_post_loader {
 	margin:60px 0 0;
-	.tac;
-	.ovh;
+	@include tac;
+	@include ovh;
 	
 	.cmsms_post_loader {
 		display:inline-block;
@@ -4790,7 +4793,7 @@ button {
 .cmsms_wrap_pagination {
 	padding-bottom:20px;
 	margin:50px 0 0;
-	.ovh;
+	@include ovh;
 	
 	.blog & {
 		padding:30px 0;
@@ -4808,12 +4811,12 @@ button {
 		display:inline-block;
 		padding:0;
 		margin:0;
-		.tac;
+		@include tac;
 		
 		li {
 			display:block;
 			padding:0 0 4px 4px;
-			.fl;
+			@include fl;
 			
 			&:first-child {padding-left:0;}
 			
@@ -4836,7 +4839,7 @@ button {
 	&.columns, 
 	&.timeline {
 		position:relative;
-		.ovh;
+		@include ovh;
 	}
 	
 	&.columns {
@@ -4863,7 +4866,7 @@ button {
 	&.timeline {
 		&:before {
 			content:'';
-			.pos_abs(2px, 100%, -1px);
+			@include pos_abs(2px, 100%, -1px);
 		}
 	}
 }
@@ -4874,7 +4877,7 @@ button {
 	padding:60px 0 0;
 	max-width:100%;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	&.cmsms_default_type {
 		&:first-child {
@@ -4886,24 +4889,24 @@ button {
 		}
 	
 		figure {
-			.tac;
+			@include tac;
 		}
 	}
 	
 	.blog.columns &, 
 	.blog.timeline & {
-		.fl;
-		.op(0);
+		@include fl;
+		@include op(0);
 		
 		&.shortcode_animated {
-			.op(1);
+			@include op(1);
 		}
 	}
 	
 	.blog.columns & {
 		min-width:280px;
 		padding:20px;
-		margin-top:@line_height_pad;
+		margin-top:$line_height_pad;
 		
 		&.shortcode_animated {
 			margin-top:0;
@@ -4953,7 +4956,7 @@ button {
 		}
 		
 		&.cmsms_timeline_left {
-			margin-left:-@line_height_pad * 2;
+			margin-left:-$line_height_pad * 2;
 			
 			.cmsms_post_cont {
 				margin-right:22%;
@@ -4961,7 +4964,7 @@ button {
 		}
 		
 		&.cmsms_timeline_right {
-			margin-left:@line_height_pad * 2;
+			margin-left:$line_height_pad * 2;
 			
 			.cmsms_post_cont {
 				margin-left:22%;
@@ -4981,7 +4984,7 @@ button {
 			
 			&:hover {
 				.preloader:after {
-					.op(.3);
+					@include op(.3);
 				}
 			}
 		}
@@ -5013,7 +5016,7 @@ button {
 				position:absolute;
 				top:0;
 				left:0;
-				.op(0);
+				@include op(0);
 			}
 		}
 		
@@ -5033,14 +5036,14 @@ button {
 				position:absolute;
 				top:0;
 				left:0;
-				.ovh;
+				@include ovh;
 			}
 			
 			.cmsms_post_cont_info {
 				padding:15px 20px 2px;
 				margin-bottom:0;
-				.bdt(0);
-				.bdb(0);
+				@include bdt(0);
+				@include bdb(0);
 				
 				> span {
 					margin-right:0;
@@ -5077,7 +5080,7 @@ button {
 					margin:0;
 					float:right;
 					overflow:visible;
-					.bdt(0);
+					@include bdt(0);
 					
 					.cmsms_post_meta_info {
 						height:auto;
@@ -5103,7 +5106,7 @@ button {
 				
 				&:before {
 					bottom:-9px;
-					.arrow_bottom(9px, 7px);
+					@include arrow_bottom(9px, 7px);
 				}
 			}
 		}
@@ -5120,7 +5123,7 @@ button {
 				
 				&:before {
 					top:-9px;
-					.arrow_top(9px, 7px);
+					@include arrow_top(9px, 7px);
 				}
 			}
 		}
@@ -5197,7 +5200,7 @@ button {
 		.cmsms_post_cont {
 			padding-bottom: 40px;
 			position:relative;
-			.ovh;
+			@include ovh;
 			
 			.cmsms_post_date_wrap {
 				padding: 40px 40px 0 40px;
@@ -5226,7 +5229,7 @@ button {
 		
 			.cmsms_post_cont_info {
 				padding:35px 40px 0 40px;
-				.ovh;
+				@include ovh;
 				
 				> span {
 					padding: 4px 10px;
@@ -5254,7 +5257,7 @@ button {
 							vertical-align: bottom;
 							
 							&:before {
-								.fl;
+								@include fl;
 								margin: 0;
 							}
 							
@@ -5276,7 +5279,7 @@ button {
 			}
 			
 			.cmsms_post_more_but {
-				.fr;
+				@include fr;
 				padding-top: 10px;
 			}
 		}
@@ -5338,7 +5341,7 @@ button {
 		
 		.cmsms_post_cont {
 			padding-bottom: 20px;
-			.ovh;
+			@include ovh;
 			
 			.cmsms_post_more {
 				padding: 10px 20px 0 20px;
@@ -5349,11 +5352,11 @@ button {
 			}
 			
 			.cmsms_post_meta_wrap {
-				.ovh;
+				@include ovh;
 				padding: 20px 20px 0 20px;
 				
 				.cmsms_post_meta_left {
-					.fl;
+					@include fl;
 					
 					.cmsms_post_date {
 						letter-spacing: 1.5px;
@@ -5365,7 +5368,7 @@ button {
 				}
 				
 				.cmsms_post_meta_right {
-					.fr;
+					@include fr;
 					
 					.cmsms_post_comments_wrap {
 						vertical-align: middle;
@@ -5396,7 +5399,7 @@ button {
 							vertical-align: bottom;
 							
 							&:before {
-								.fr;
+								@include fr;
 								margin: 0;
 							}
 							
@@ -5427,7 +5430,7 @@ button {
 			
 			.cmsms_post_cont_info {
 				padding: 30px 20px 0 20px;
-				.ovh;
+				@include ovh;
 				
 				> span {
 					padding: 4px 10px;
@@ -5442,7 +5445,7 @@ button {
 	&.cmsms_timeline_type {
 		.cmsms_post_cont {
 			.cmsms_post_meta_info {
-				.fr;
+				@include fr;
 				
 				.cmsms_post_comments_wrap {
 					vertical-align: middle;
@@ -5473,7 +5476,7 @@ button {
 						vertical-align: bottom;
 						
 						&:before {
-							.fr;
+							@include fr;
 							margin: 0;
 						}
 						
@@ -5498,12 +5501,12 @@ button {
 	padding-top:60px;
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 }
 
 .opened-article {
-	.ovh;
+	@include ovh;
 
 	.post {
 		padding:0 0 25px;
@@ -5519,10 +5522,10 @@ button {
 		
 		.cmsms_post_cont {
 			.cmsms_post_cont_info {
-				.ovh;
+				@include ovh;
 			
 				.cmsms_post_cont_left {
-					.fl;
+					@include fl;
 					margin-right: 5px;
 					margin-bottom: 25px;
 					
@@ -5535,7 +5538,7 @@ button {
 				}
 				
 				.cmsms_post_cont_right {
-					.fr;
+					@include fr;
 					
 					> span {
 						padding: 5px 10px;
@@ -5657,8 +5660,8 @@ button {
 .post_nav {
 	padding: 33px 30px 33px 30px;
 	margin-bottom:55px;
-	.bd(2px);
-	.ovh;
+	@include bd(2px);
+	@include ovh;
 	position: relative;
 	
 	&:before {
@@ -5697,7 +5700,7 @@ button {
 		&.cmsms_next_post {
 			text-align: right;
 			padding-left:30px;
-			.fr;
+			@include fr;
 			
 			a {
 				padding:0 30px 0 0;
@@ -5746,7 +5749,7 @@ button {
 	margin-bottom:55px;
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	.about_author_title {
@@ -5756,8 +5759,8 @@ button {
 	.about_author_inner {
 		margin-bottom:2px;
 		padding:40px;
-		.ovh;
-		.bd(2px);
+		@include ovh;
+		@include bd(2px);
 	
 		.alignleft {
 			margin-right:40px;
@@ -5765,8 +5768,8 @@ button {
 	
 		> figure, 
 		.avatar {
-			.ovh;
-			.bdrs(50%);
+			@include ovh;
+			@include bdrs(50%);
 		}
 	}
 }
@@ -5900,20 +5903,20 @@ button {
 .post_comments {
 	position:relative;
 	margin-bottom: 55px;
-	.bdb(2px);
+	@include bdb(2px);
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	.commentlist {
 		list-style:none;
 		padding: 33px 35px 0 35px;
 		margin-bottom:-2px;
-		.bd(2px 2px 0 2px);
+		@include bd(2px 2px 0 2px);
 		
 		&:after {
-			.cl_after;
+			@include cl_after;
 		}
 		
 		> li {
@@ -5934,7 +5937,7 @@ button {
 				
 					&:last-child {
 						> .comment-body {
-							.bdb(0);
+							@include bdb(0);
 						}
 					}
 				}
@@ -5945,12 +5948,12 @@ button {
 			margin-top:10px;
 			padding:24px 0;
 			position:relative;
-			.bdb(1px);
+			@include bdb(1px);
 			
 			.alignleft {
 				margin:1px 40px 5px 0;
 				position:relative;
-				.tac;
+				@include tac;
 				
 				&:before {
 					content: none;
@@ -5958,7 +5961,7 @@ button {
 			
 				img {
 					display:block;
-					.bdrs(50%);
+					@include bdrs(50%);
 				}
 				
 				.comment-edit-link {
@@ -5968,7 +5971,7 @@ button {
 			}
 			
 			.comment-content {
-				.ovh;
+				@include ovh;
 				
 				.comment-edit-link, 
 				.comment-reply-link {
@@ -6008,7 +6011,7 @@ button {
 .comment-respond {
 	margin:40px 0 20px 0;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.comment-reply-title {
 		small {
@@ -6028,14 +6031,14 @@ button {
 			input[type=text] {
 				margin-right:10px;
 				width: 100%;
-				.bdrs(0);
+				@include bdrs(0);
 			}
 			
 			textarea {
 				width: 100%;
 				margin-bottom:10px;
 				resize: none;
-				.bdrs(0);
+				@include bdrs(0);
 			}
 			
 			label {
@@ -6088,7 +6091,7 @@ button {
 .cmsmasters_pings_list {
 	margin:0 0 40px;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.pingslist {
 		list-style:none;
@@ -6098,8 +6101,8 @@ button {
 .project_navi {
 	padding:20px 0;
 	position:relative;
-	.bdt(2px);
-	.ovh;
+	@include bdt(2px);
+	@include ovh;
 	
 	&:first-of-type {
 		padding-bottom:20px;
@@ -6120,11 +6123,11 @@ button {
 	margin-bottom:60px;
 	padding:10px 0;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.cmsms_project_filter {
-		.ovh;
-		.tac;
+		@include ovh;
+		@include tac;
 		
 		.cmsms_project_sort_block {
 			display:inline-block;
@@ -6169,37 +6172,17 @@ button {
 			.cmsms_project_filter_list {
 				margin:0;
 				padding:0 20px;
-				.tac;
-				.ovh;
+				@include tac;
+				@include ovh;
 				
 				li {
 					display:inline-block;
+					padding:0 18px 0 18px;
 					margin-top: 20px;
-					margin-right: 30px;
+					
 					&.current {
 						a.button {
-							position: relative;
-							z-index: 0;
-							&:before{
-								width: 110%;
-								height: 100%;
-								content: "";
-								transform: skew(-25deg, 0) ;
-								-webkit-transform: skew(-25deg, 0) ;
-								-moz-transform: skew(-25deg, 0) ;
-								-o-transform: skew(-25deg, 0) ;
-								-ms-transform: skew(-25deg, 0) ;
-								background:#ff6e01;
-								z-index: -1;
-								position: absolute;
-								left: -5%;
-								top: 0;								
-							}
-							.bd(0);
-							
-							color: #FFF;
-							position: relative;
-
+							@include bdb(1px);
 						}
 					}
 					
@@ -6208,7 +6191,7 @@ button {
 					}
 					
 					&:last-child {
-						margin-right:0;
+						padding-right:0;
 					}
 				
 					&:before {
@@ -6216,11 +6199,9 @@ button {
 					}
 					
 					> a.button {
-						padding: 5px 18px;
-						display: block;
-						.bd(0);
+						padding: 0;
+						@include bd(0);
 						border-radius: 0;
-						font-size: 18px;
 					}
 				}
 			}
@@ -6230,7 +6211,7 @@ button {
 
 .cmsms_wrap_more_projects {
 	width:100%;
-	.ovh;
+	@include ovh;
 	
 	a.cmsms_button {
 		padding: 9px 27px;
@@ -6239,8 +6220,8 @@ button {
 
 .cmsms_wrap_project_loader {
 	margin:120px 0 35px;
-	.tac;
-	.ovh;
+	@include tac;
+	@include ovh;
 	
 	.cmsms_project_loader {
 		display:inline-block;
@@ -6258,12 +6239,12 @@ button {
 		&.perfect {
 			.project {
 				figure {
-					.op(0);
+					@include op(0);
 				}
 				
 				&.shortcode_animated {
 					figure {
-						.op(1);
+						@include op(1);
 					}
 				}
 			}
@@ -6271,10 +6252,10 @@ button {
 		
 		&.masonry {
 			.project {
-				.op(0);
+				@include op(0);
 				
 				&.shortcode_animated {
-					.op(1);
+					@include op(1);
 				}
 			}
 		}
@@ -6318,11 +6299,11 @@ button {
 	.project {
 		min-width:260px;
 		position:relative;
-		.fl;
-		.ovh;
+		@include fl;
+		@include ovh;
 		
 		.preloader {
-			padding-bottom:@img_pad_bot;
+			padding-bottom:$img_pad_bot;
 			
 			&.highImg {
 				height:auto;
@@ -6336,7 +6317,7 @@ button {
 			
 			.cmsms_image_link,
 			.cmsms_open_link {
-				.bd(2px);
+				@include bd(2px);
 				width: 100px;
 				height: 44px;
 				text-align: center;
@@ -6359,7 +6340,7 @@ button {
 						.cmsms_image_link.no_open_link {
 							left:0;
 							right:0;
-							.op(1);
+							@include op(1);
 						}
 					
 						.cmsms_image_link {
@@ -6388,7 +6369,7 @@ button {
 			.project_inner {
 				padding:10px 0 10px;
 				position:relative;
-				.ovh;
+				@include ovh;
 				
 				.cmsms_project_header {
 					position:relative;
@@ -6444,9 +6425,9 @@ button {
 		margin:0 -20px;
 	
 		.project {
-			padding-left:10px;
-			padding-right:10px;
-			padding-bottom:20px;
+			padding-left:20px;
+			padding-right:20px;
+			padding-bottom:40px;
 			
 			.project_outer {
 				margin-bottom:2px;
@@ -6499,10 +6480,10 @@ button {
 		}
 		
 		.project {
-			.op(0);
+			@include op(0);
 			
 			&.shortcode_animated {
-				.op(1);
+				@include op(1);
 			}
 			
 			.project_outer {
@@ -6587,13 +6568,13 @@ button {
 							.cmsms_open_link {
 								left:0;
 								right:0;
-								.op(1);
+								@include op(1);
 							}
 							
 							.cmsms_image_link {
 								left:-110px;
 								right:0;
-								.op(1);
+								@include op(1);
 							}
 							
 							.cmsms_image_link + .cmsms_open_link {
@@ -6619,21 +6600,21 @@ button {
 		min-width:1px;
 		float:none;
 		overflow:visible;
-		.cl;
+		@include cl;
 		
 		> figure {
 			margin-bottom: 40px;
 		}
 		
 		&:after {
-			.cl_after;
+			@include cl_after;
 		}
 		
 		.cmsms_project_header {
 			padding:0 0 40px;
-			.tal;
-			.ovh;
-			.cl;
+			@include tal;
+			@include ovh;
+			@include cl;
 			
 			.cmsms_project_title {
 				margin:0;
@@ -6643,16 +6624,16 @@ button {
 		.project_content {
 			padding-bottom:30px;
 			position:relative;
-			.ovh;
+			@include ovh;
 			
 			.project_gallery_row {
-				margin:0 -@col_mar (@col_mar * 2);
+				margin:0 -$col_mar ($col_mar * 2);
 				position:relative;
 				
 				.one_third, 
 				.one_half, 
 				.one_first {
-					margin:0 @col_mar;
+					margin:0 $col_mar;
 				}
 				
 				.one_first .preloader {
@@ -6678,14 +6659,14 @@ button {
 			&.with_sidebar {
 				width:69%;
 				padding-right:40px;
-				.fl;
+				@include fl;
 			}
 		}
 		
 		.project_sidebar {
 			width:31%;
 			margin:-5px 0 0;
-			.fl;
+			@include fl;
 			
 			.project_details {
 				padding-bottom:50px;
@@ -6696,23 +6677,23 @@ button {
 				
 				.project_details_title + .project_details_item,
 				.project_details_item:first-child {
-					.bdt(0);
+					@include bdt(0);
 				}
 				
 				.project_details_item {
 					padding:10px 0;
 					position:relative;
-					.bdt;
-					.ovh;
+					@include bdt;
+					@include ovh;
 					
 					> div {
 						width:50%;
-						.fl;
-						.ovh;
+						@include fl;
+						@include ovh;
 					}
 					
 					.project_details_item_desc {
-						.tar;
+						@include tar;
 					}
 				}
 			}
@@ -6726,23 +6707,23 @@ button {
 				
 				.project_features_title + .project_features_item,
 				.project_features_item:first-child {
-					.bdt(0);
+					@include bdt(0);
 				}
 				
 				.project_features_item {
 					padding:10px 0;
 					position:relative;
-					.bdt;
-					.ovh;
+					@include bdt;
+					@include ovh;
 					
 					> div {
 						width:50%;
-						.fl;
-						.ovh;
+						@include fl;
+						@include ovh;
 					}
 					
 					.project_features_item_desc {
-						.tar;
+						@include tar;
 					}
 				}
 			}
@@ -6752,7 +6733,7 @@ button {
 				margin:0;
 				
 				&:after {
-					.cl_after;
+					@include cl_after;
 				}
 				
 				.share_posts_title {
@@ -6761,7 +6742,7 @@ button {
 				
 				.share_posts_item {
 					width:50%;
-					.fl;
+					@include fl;
 				}
 			}
 		}
@@ -6777,22 +6758,22 @@ button {
 /***************** Profiles Profile ******************/
 .profiles.opened-article {
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	.profile {
 		position:relative;
-		.cl;
+		@include cl;
 		
 		&:after {
-			.cl_after;
+			@include cl_after;
 		}
 		
 		.cmsms_profile_header {
 			padding:0 0 30px;
-			.tal;
-			.ovh;
-			.cl;
+			@include tal;
+			@include ovh;
+			@include cl;
 			
 			.cmsms_profile_title {
 				margin:0;
@@ -6806,12 +6787,12 @@ button {
 		.profile_content {
 			padding-bottom:30px;
 			position:relative;
-			.ovh;
+			@include ovh;
 			
 			&.with_sidebar {
 				width:69%;
 				padding-right:40px;
-				.fl;
+				@include fl;
 			}
 			
 			> figure {
@@ -6822,7 +6803,7 @@ button {
 		.profile_sidebar {
 			width:31%;
 			margin:-5px 0 0;
-			.fl;
+			@include fl;
 			
 			.profile_details {
 				padding:0 0 50px;
@@ -6833,23 +6814,23 @@ button {
 				
 				.profile_details_title + .profile_details_item,
 				.profile_details_item:first-child {
-					.bdt(0);
+					@include bdt(0);
 				}
 				
 				.profile_details_item {
 					padding:10px 0;
 					position:relative;
-					.bdt;
-					.ovh;
+					@include bdt;
+					@include ovh;
 					
 					> div {
 						width:50%;
-						.fl;
-						.ovh;
+						@include fl;
+						@include ovh;
 					}
 					
 					.profile_details_item_desc {
-						.tar;
+						@include tar;
 					}
 				}
 			}
@@ -6863,30 +6844,30 @@ button {
 				
 				.profile_features_title + .profile_features_item,
 				.profile_features_item:first-child {
-					.bdt(0);
+					@include bdt(0);
 				}
 				
 				.profile_features_item {
 					padding:10px 0;
 					position:relative;
-					.bdt;
-					.ovh;
+					@include bdt;
+					@include ovh;
 					
 					> div {
 						width:50%;
-						.fl;
-						.ovh;
+						@include fl;
+						@include ovh;
 					}
 					
 					.profile_features_item_desc {
-						.tar;
+						@include tar;
 					}
 				}
 			}
 			
 			.profile_social_icons {
 				padding:0 0 50px;
-				.ovh;
+				@include ovh;
 				
 				.profile_social_icons_title {
 					margin:0 0 25px;
@@ -6927,7 +6908,7 @@ button {
 /***************** Notice ******************/
 .cmsms_notice {
 	border-color:transparent;
-	.bd;
+	@include bd;
 	
 	&.cmsms_notice_success {
 		background-color:#e9fdc8;
@@ -6977,7 +6958,7 @@ button {
 		height:27px;
 		top:-10px;
 		right:-10px;
-		.bd(2px);
+		@include bd(2px);
 		border-radius: 50%;
 		color: #d0d0d0;
 	}
@@ -7014,7 +6995,7 @@ button {
 					background-repeat:no-repeat;
 					background-size:cover;
 					display:inline-block;
-					.tac;
+					@include tac;
 				}
 			}
 		}
@@ -7026,7 +7007,7 @@ button {
 			-webkit-transform:scale(0);
 			-moz-transform:scale(0);
 			transform:scale(0);
-			.op(0);
+			@include op(0);
 		}
 		
 		&.shortcode_animated {
@@ -7034,7 +7015,7 @@ button {
 				-webkit-transform:scale(1);
 				-moz-transform:scale(1);
 				transform:scale(1);
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
@@ -7049,7 +7030,7 @@ button {
 			-webkit-transform:scale(0);
 			-moz-transform:scale(0);
 			transform:scale(0);
-			.op(0);
+			@include op(0);
 		}
 		
 		&[class*=" cmsms-icon-"], 
@@ -7062,7 +7043,7 @@ button {
 				-webkit-transform:scale(1);
 				-moz-transform:scale(1);
 				transform:scale(1);
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
@@ -7080,8 +7061,8 @@ button {
 			-webkit-transform:scale(0);
 			-moz-transform:scale(0);
 			transform:scale(0);
-			.tac;
-			.op(0);
+			@include tac;
+			@include op(0);
 		}
 		
 		&.shortcode_animated {
@@ -7089,7 +7070,7 @@ button {
 				-webkit-transform:scale(1);
 				-moz-transform:scale(1);
 				transform:scale(1);
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
@@ -7104,8 +7085,8 @@ button {
 			-webkit-transform:scale(0);
 			-moz-transform:scale(0);
 			transform:scale(0);
-			.tac;
-			.op(0);
+			@include tac;
+			@include op(0);
 		}
 		
 		&.shortcode_animated {
@@ -7113,7 +7094,7 @@ button {
 				-webkit-transform:scale(1);
 				-moz-transform:scale(1);
 				transform:scale(1);
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
@@ -7131,7 +7112,7 @@ button {
 				-webkit-transform:scale(0);
 				-moz-transform:scale(0);
 				transform:scale(0);
-				.op(0);
+				@include op(0);
 			}
 		}
 		
@@ -7146,7 +7127,7 @@ button {
 					-webkit-transform:scale(1);
 					-moz-transform:scale(1);
 					transform:scale(1);
-					.op(1);
+					@include op(1);
 				}
 			}
 		}
@@ -7198,20 +7179,20 @@ button {
 		.cmsms_toggle {
 			.cmsms_toggle_inner {
 				padding:30px 35px 15px 40px;
-				.bd(2px);
+				@include bd(2px);
 			}
 		}
 	}
 	
 	&.toggles_mode_accordion {
-		.bdr(2px);
-		.bdl(2px);
+		@include bdr(2px);
+		@include bdl(2px);
 		
 		.cmsms_toggles_filter {
 			padding-bottom:10px;
 			padding-top: 10px;
 			padding-left: 20px;
-			.bdt(2px);
+			@include bdt(2px);
 		}
 		
 		.cmsms_toggle_title {
@@ -7221,17 +7202,17 @@ button {
 		}
 		
 		.cmsms_toggle_wrap {
-			.bdt(2px);
+			@include bdt(2px);
 			margin-top: -2px;
 			
 			.cmsms_toggle_title {
-				.bdb(2px);
+				@include bdb(2px);
 			}
 			
 			.cmsms_toggle {
-				.bdb(2px);
+				@include bdb(2px);
 				.cmsms_toggle_inner {
-					.bd(0px);
+					@include bd(0px);
 				}
 			}
 		}
@@ -7254,7 +7235,7 @@ button {
 					width:36px;
 					height:50px;
 					padding:0;
-					margin:0 0 0 -.1em;
+					margin:0 0 0 -@include 1em;
 					margin-left: -18px;
 					position:absolute;
 					top:0;
@@ -7268,7 +7249,7 @@ button {
 		.cmsms_tabs_list {
 			display: table;
 			width: 100%;
-			.bdb(2px);
+			@include bdb(2px);
 			
 			.cmsms_tabs_list_item {
 				display:table-cell;
@@ -7313,7 +7294,7 @@ button {
 			width:22.5%;
 			vertical-align:top;
 			display: inline-block;
-			.bdr(2px);
+			@include bdr(2px);
 			
 			.cmsms_tabs_list_item {
 				&:before {
@@ -7327,7 +7308,7 @@ button {
 					right: -2px;
 				
 					.touch & {
-						.dn;
+						@include dn;
 					}
 				}
 				
@@ -7340,7 +7321,7 @@ button {
 				}
 				
 				> a {
-					padding:19px @blocks_hor_pad;
+					padding:19px $blocks_hor_pad;
 					text-align: left;
 					
 					&[class^="cmsms-icon-"], 
@@ -7382,8 +7363,8 @@ button {
 				float:none;
 				padding-left:0;
 				direction:ltr;
-				.bdl(2px);
-				.bdr(0px);
+				@include bdl(2px);
+				@include bdr(0px);
 				
 				.cmsms_tabs_list_item {
 					&:before {
@@ -7403,7 +7384,7 @@ button {
 							top: 50%;
 							margin:-25px -0.1em 0 0;
 							left:20px;
-							right:@blocks_hor_pad;
+							right:$blocks_hor_pad;
 						}
 					}
 				}
@@ -7472,7 +7453,7 @@ button {
 	
 	&.cmsms_color_type_icon {
 		.cmsms_icon_list_item {
-			.ovh;
+			@include ovh;
 		}
 	}
 	
@@ -7500,7 +7481,7 @@ button {
 			&:before {
 				height:0;
 				top:40px;
-				.op(0);
+				@include op(0);
 			}
 			
 			&.cmsms_icon_type_image {
@@ -7512,7 +7493,7 @@ button {
 			}
 			
 			.cmsms_icon_list_icon {
-				.op(.3);
+				@include op(.3);
 				-webkit-transform:scale(.5);
 				-moz-transform:scale(.5);
 				transform:scale(.5);
@@ -7521,11 +7502,11 @@ button {
 			&.shortcode_animated {
 				&:before {
 					height:100%;
-					.op(1);
+					@include op(1);
 				}
 				
 				.cmsms_icon_list_icon {
-					.op(1);
+					@include op(1);
 					-webkit-transform:scale(1);
 					-moz-transform:scale(1);
 					transform:scale(1);
@@ -7579,11 +7560,11 @@ button {
 					position:absolute;
 					bottom:0;
 					left:0;
-					.ovh;
+					@include ovh;
 					
 					.cmsms_stat_inner {
 						height:100%;
-						.bd(3px);
+						@include bd(3px);
 						
 						&:before {
 							left:auto;
@@ -7668,7 +7649,7 @@ button {
 					padding-top:40px;
 					left:3px;
 					top:3px;
-					.bdrs(50%);
+					@include bdrs(50%);
 					
 					&:before {
 						font-size:32px;
@@ -7694,7 +7675,7 @@ button {
 				canvas {
 					width:180px;
 					height:180px;
-					.bdrs(50%);
+					@include bdrs(50%);
 				}
 				
 				&.stat_only_number {
@@ -7723,7 +7704,7 @@ button {
 		
 		.cmsms_counter {
 			min-height:100px;
-			.ovh;
+			@include ovh;
 			
 			.cmsms_counter_inner {
 				margin:30px 0;
@@ -7808,12 +7789,12 @@ q {
 
 /***************** Button ******************/
 .cmsms_button {
-	.bd(2px);
+	@include bd(2px);
 	display:inline-block;
 	padding:9px 20px;
 	cursor:pointer;
 	position:relative;
-	.bdrs(2px);
+	@include bdrs(2px);
 	
 	&:before {
 		line-height:inherit !important;
@@ -7830,14 +7811,14 @@ q {
 		background:none;
 		border:0;
 		margin:0;
-		padding:0 @line_height_pad;
-		.ovh;
-		.bdrs(0);
-		.bxsh_none;
+		padding:0 $line_height_pad;
+		@include ovh;
+		@include bdrs(0);
+		@include bxsh_none;
 		
 		&:hover {
 			margin:0;
-			.bxsh_none;
+			@include bxsh_none;
 		}
 		
 		&:after {
@@ -7847,11 +7828,11 @@ q {
 	}
 	
 	&.cmsms_but_bg_hover {
-		.bd;
+		@include bd;
 	}
 	
 	&.cmsms_but_bg_slide_left {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:0;
@@ -7868,7 +7849,7 @@ q {
 	}
 	
 	&.cmsms_but_bg_slide_right {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:0;
@@ -7885,7 +7866,7 @@ q {
 	}
 	
 	&.cmsms_but_bg_slide_top {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:100%;
@@ -7902,7 +7883,7 @@ q {
 	}
 	
 	&.cmsms_but_bg_slide_bottom {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:100%;
@@ -7919,14 +7900,14 @@ q {
 	}
 	
 	&.cmsms_but_bg_expand_vert {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:0;
 			height:105%;
 			left:50%;
 			top:50%;
-			.op(0);
+			@include op(0);
 			-webkit-transform:translateX(-50%) translateY(-50%);
 			-moz-transform:translateX(-50%) translateY(-50%);
 			-o-transform:translateX(-50%) translateY(-50%);
@@ -7937,20 +7918,20 @@ q {
 		&:hover {
 			&:after {
 				width:90%;
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
 	
 	&.cmsms_but_bg_expand_hor {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:105%;
 			height:0;
 			left:50%;
 			top:50%;
-			.op(0);
+			@include op(0);
 			-webkit-transform:translateX(-50%) translateY(-50%);
 			-moz-transform:translateX(-50%) translateY(-50%);
 			-o-transform:translateX(-50%) translateY(-50%);
@@ -7961,20 +7942,20 @@ q {
 		&:hover {
 			&:after {
 				height:75%;
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
 	
 	&.cmsms_but_bg_expand_diag {
-		.bd;
+		@include bd;
 		
 		&:after {
 			width:500%;
 			height:0;
 			left:50%;
 			top:50%;
-			.op(0);
+			@include op(0);
 			-webkit-transform:translateX(-50%) translateY(-50%) rotate(45deg);
 			-moz-transform:translateX(-50%) translateY(-50%) rotate(45deg);
 			-ms-transform:translateX(-50%) translateY(-50%) rotate(45deg);
@@ -7984,19 +7965,19 @@ q {
 		&:hover {
 			&:after {
 				height:170%;
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
 	
 	&.cmsms_but_shadow {
 		padding-bottom:3px;
-		.bxshi(0, -3px, 0, 0, .2);
+		@include bxshi(0, -3px, 0, 0, .2);
 		
 		&:hover {
 			padding-bottom:0;
 			margin-top:3px;
-			.bxshi(0, 0, 0, 0, .02);
+			@include bxshi(0, 0, 0, 0, .02);
 		}
 	}
 	
@@ -8044,12 +8025,12 @@ q {
 	&.cmsms_but_icon_divider {
 		&:after {
 			background-color:transparent;
-			.bdr;
+			@include bdr;
 		}
 	}
 	
 	&.cmsms_but_icon_inverse {
-		.bd;
+		@include bd;
 	
 		&:after {
 			background-color:transparent;
@@ -8058,14 +8039,14 @@ q {
 	
 	&.cmsms_but_icon_slide_left, 
 	&.cmsms_but_icon_slide_right {
-		padding-left:(@line_height_pad * 2);
-		padding-right:(@line_height_pad * 2);
-		.bd;
+		padding-left:($line_height_pad * 2);
+		padding-right:($line_height_pad * 2);
+		@include bd;
 	}
 	
 	&.cmsms_but_icon_slide_left {
 		&:before {
-			.pos_abs((@line_height_pad * 2), auto, -(@line_height_pad * 2), auto);
+			@include pos_abs(($line_height_pad * 2), auto, -($line_height_pad * 2), auto);
 		}
 		
 		&:hover {
@@ -8077,7 +8058,7 @@ q {
 	
 	&.cmsms_but_icon_slide_right {
 		&:before {
-			.pos_abs((@line_height_pad * 2), auto, auto, -(@line_height_pad * 2));
+			@include pos_abs(($line_height_pad * 2), auto, auto, -($line_height_pad * 2));
 		}
 		
 		&:hover {
@@ -8091,10 +8072,10 @@ q {
 	&.cmsms_but_icon_hover_slide_right, 
 	&.cmsms_but_icon_hover_slide_top, 
 	&.cmsms_but_icon_hover_slide_bottom {
-		.bd;
+		@include bd;
 		
 		&:before {
-			.pos_abs(100%, auto);
+			@include pos_abs(100%, auto);
 		}
 		
 		span {
@@ -8320,7 +8301,7 @@ q {
 
 .cmsms_hover_slider {
 	.cmsms_hover_slider_items {
-		padding:0 0 @resp_blocks_pad;
+		padding:0 0 $resp_blocks_pad;
 	}
 	
 	li:before {
@@ -8340,7 +8321,7 @@ q {
 				-webkit-transform:scale(.5);
 				-moz-transform:scale(.5);
 				transform:scale(.5);
-				.op(.3);
+				@include op(.3);
 				
 				&:before {
 					content:'';
@@ -8350,16 +8331,16 @@ q {
 					position:absolute;
 					top:0;
 					left:0;
-					.op(.5);
+					@include op(.5);
 				}
 				
 				&:hover:before {
-					.op(0);
+					@include op(0);
 				}
 			}
 			
 			&.hovered_item a:before {
-				.op(0);
+				@include op(0);
 			}
 			
 			&.shortcode_animated {
@@ -8367,7 +8348,7 @@ q {
 					-webkit-transform:scale(1);
 					-moz-transform:scale(1);
 					transform:scale(1);
-					.op(1);
+					@include op(1);
 				}
 			}
 		}
@@ -8402,7 +8383,7 @@ q {
 
 .content_slider {
 	margin-bottom:20px;
-	.ovh;
+	@include ovh;
 	
 	.owl-buttons {
 		position: inherit;
@@ -8469,14 +8450,14 @@ q {
 	position:relative;
 	
 	&:after {
-		.cl_after;
+		@include cl_after;
 	}
 	
 	.cmsms_more_gallery_items {
 		display:block;
 		padding:40px 0 0;
-		.tac;
-		.ovh;
+		@include tac;
+		@include ovh;
 	}
 }
 
@@ -8510,7 +8491,7 @@ q {
 			-webkit-transform:scale(1);
 			-moz-transform:scale(1);
 			transform:scale(1);
-			.op(1);
+			@include op(1);
 		}
 		
 		&.cmsms_caption {
@@ -8521,7 +8502,7 @@ q {
 			
 			figcaption {
 				padding:15px 0 0;
-				.tac;
+				@include tac;
 			}
 		}
 	}
@@ -8540,7 +8521,7 @@ q {
 	.quote_content {
 		position:relative;
 		margin:0 0 30px;
-		.ovh;
+		@include ovh;
 		
 		p {
 			padding:0;
@@ -8555,13 +8536,13 @@ q {
 		.cmsms_quote {
 			padding-top:37px;
 			position:relative;
-			.ovh;
+			@include ovh;
 		}
 		
 		.quote_content {
-			.tal;
-			.bdt(2px);
-			.bdb(2px);
+			@include tal;
+			@include bdt(2px);
+			@include bdb(2px);
 			padding: 55px 0 55px 70px;
 			
 			&:before {
@@ -8589,7 +8570,7 @@ q {
 			
 			&:after {
 				right:0;
-				.arrow_bottom_left(25px, 25px);
+				@include arrow_bottom_left(25px, 25px);
 			}
 		}
 		
@@ -8600,7 +8581,7 @@ q {
 			right:0;
 			width: 70px;
 			height: 39px;
-			.bd(2px);
+			@include bd(2px);
 			
 			> div {
 				display:block;
@@ -8625,7 +8606,7 @@ q {
 		
 		.quote_info_wrap {
 			display:table;
-			.ovh;
+			@include ovh;
 			float:right;
 		}
 		
@@ -8636,14 +8617,14 @@ q {
 			
 			img {
 				width:65px;
-				.bdrs(50%);
+				@include bdrs(50%);
 			}
 		}
 		
 		.wrap_quote_title {
 			display:table-cell;
 			vertical-align:middle;
-			.tar;
+			@include tar;
 		}
 	}
 	
@@ -8651,18 +8632,18 @@ q {
 		padding-top: 30px;
 		
 		.cmsms_quote_inner {
-			.tac;
+			@include tac;
 			padding: 25px 60px;
 		}
 		
 		.quote_content {
 			margin-bottom:20px;
-			.tac;
+			@include tac;
 		}
 		
 		.wrap_quote_title {
 			padding-top:20px;
-			.tac;
+			@include tac;
 			
 			.quote_subtitle {
 				display:inline-block;
@@ -8674,7 +8655,7 @@ q {
 			top: 0;
 			right:0;
 			left:0;
-			.tac;
+			@include tac;
 			
 			.owl-page {
 				&:first-child {
@@ -8688,7 +8669,7 @@ q {
 			
 			img {
 				width:128px;
-				.bdrs(50%);
+				@include bdrs(50%);
 			}
 		}
 		
@@ -8718,7 +8699,7 @@ q {
 }
 
 .quote_content_wrap {
-	.ovh;
+	@include ovh;
 }
 
 .quote_grid {
@@ -8752,7 +8733,7 @@ q {
 			}
 		
 			&:nth-last-child(2) {
-				.bdb(0px);
+				@include bdb(0px);
 			}
 		
 		}
@@ -8852,7 +8833,7 @@ q {
 	
 	.quote_info_wrap {
 		display:table;
-		.ovh;
+		@include ovh;
 		float:right;
 	}
 		
@@ -8865,20 +8846,20 @@ q {
 		
 		img {
 			width:65px;
-			.bdrs(50%);
+			@include bdrs(50%);
 		}
 	}
 	
 	.wrap_quote_title {
 		display:table-cell;
 		vertical-align:middle;
-		.tar;
+		@include tar;
 	}
 	
 	.quotes_list {
 		width:100%;
 		overflow:hidden;
-		.bdb(2px);
+		@include bdb(2px);
 		margin-bottom: -2px;
 		  
 		.cmsms_quote {
@@ -8910,33 +8891,33 @@ q {
 
 /***************** Pricing tables ******************/
 .cmsms_pricing_table {
-	margin:0 -@col_mar;
+	margin:0 -$col_mar;
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.cmsms_pricing_item {
 		width:25%;
 		display:block;
 		position:relative;
-		.fl;
-		margin: 40px @col_mar 0;
-		.bd(2px);
+		@include fl;
+		margin: 40px $col_mar 0;
+		@include bd(2px);
 		
 		&.pricing_best {
-			.bd(0);
+			@include bd(0);
 			
 			.cmsms_pricing_item_inner {
 				padding: 29px 20px;
 			}
 			
 			.cmsms_button {
-				.bd(0);
+				@include bd(0);
 			}
 		}
 		
 		.cmsms_pricing_item_inner {
 			position:relative;
-			.tac;
+			@include tac;
 			padding: 25px 20px;
 		}
 		
@@ -8970,7 +8951,7 @@ q {
 		.cmsms_price_wrap {
 			padding:40px 0;
 			position:relative;
-			.tac;
+			@include tac;
 			margin-top: 20px;
 			
 			&:before,
@@ -9050,13 +9031,13 @@ q {
 	&.cmsms_image_l {
 		margin-right:40px;
 		margin-bottom:20px;
-		.fl;
+		@include fl;
 	}
 
 	&.cmsms_image_r {
 		margin-left:40px;
 		margin-bottom:20px;
-		.fr;
+		@include fr;
 	}
 	
 	&.cmsms_image_c {
@@ -9071,19 +9052,19 @@ q {
 	
 	.cmsms_img_caption {
 		padding:15px 0;
-		.tac;
+		@include tac;
 	}
 }
 
 .aligncenter {
-	.tac;
+	@include tac;
 }
 
 .wp-caption {
 	max-width:100%;
 	padding:20px 20px 0;
-	margin-bottom:@line_height_pad;
-	.bd(2px);
+	margin-bottom:$line_height_pad;
+	@include bd(2px);
 	
 	&.aligncenter {
 		margin-left:auto;
@@ -9104,7 +9085,7 @@ q {
 	
 	.wp-caption-text {
 		padding:15px 0;
-		.tac;
+		@include tac;
 	}
 }
 
@@ -9169,17 +9150,17 @@ q {
 
 /***************** Sidebar ******************/
 .cmsms_sidebar {
-	margin:0 -@col_mar;
+	margin:0 -$col_mar;
 	
 	aside {
-		margin:0 @col_mar;
+		margin:0 $col_mar;
 		float:left;
 	}
 }
 
 .sidebar_layout_14141414 {
 	aside {
-		width:round((100% / 4) - (@col_mar * 2), 2);
+		width:round((100% / 4) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9190,13 +9171,13 @@ q {
 	> div.cl + aside + aside, 
 	> div.cmsms_widget_divider + aside, 
 	> div.cmsms_widget_divider + aside + aside {
-		width:round((100% / 4) - (@col_mar * 2), 2);
+		width:round((100% / 4) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside + aside, 
 	> div.cl + aside + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside + aside {
-		width:round((100% / 2) - (@col_mar * 2), 2);
+		width:round((100% / 2) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9207,13 +9188,13 @@ q {
 	> div.cl + aside + aside + aside, 
 	> div.cmsms_widget_divider + aside, 
 	> div.cmsms_widget_divider + aside + aside + aside {
-		width:round((100% / 4) - (@col_mar * 2), 2);
+		width:round((100% / 4) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside, 
 	> div.cl + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside {
-		width:round((100% / 2) - (@col_mar * 2), 2);
+		width:round((100% / 2) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9221,7 +9202,7 @@ q {
 	> aside:first-child, 
 	> div.cl + aside, 
 	> div.cmsms_widget_divider + aside {
-		width:round((100% / 2) - (@col_mar * 2), 2);
+		width:round((100% / 2) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside, 
@@ -9230,13 +9211,13 @@ q {
 	> div.cl + aside + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside + aside {
-		width:round((100% / 4) - (@col_mar * 2), 2);
+		width:round((100% / 4) - ($col_mar * 2), 2);
 	}
 }
 
 .sidebar_layout_131313 {
 	aside {
-		width:round((100% / 3) - (@col_mar * 2), 2);
+		width:round((100% / 3) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9244,13 +9225,13 @@ q {
 	> aside:first-child, 
 	> div.cl + aside, 
 	> div.cmsms_widget_divider + aside {
-		width:round(((100% * 3) / 4) - (@col_mar * 2), 2);
+		width:round(((100% * 3) / 4) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside, 
 	> div.cl + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside {
-		width:round((100% / 4) - (@col_mar * 2), 2);
+		width:round((100% / 4) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9258,13 +9239,13 @@ q {
 	> aside:first-child, 
 	> div.cl + aside, 
 	> div.cmsms_widget_divider + aside {
-		width:round((100% / 4) - (@col_mar * 2), 2);
+		width:round((100% / 4) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside, 
 	> div.cl + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside {
-		width:round(((100% * 3) / 4) - (@col_mar * 2), 2);
+		width:round(((100% * 3) / 4) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9272,13 +9253,13 @@ q {
 	> aside:first-child, 
 	> div.cl + aside, 
 	> div.cmsms_widget_divider + aside {
-		width:round(((100% * 2) / 3) - (@col_mar * 2), 2);
+		width:round(((100% * 2) / 3) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside, 
 	> div.cl + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside {
-		width:round((100% / 3) - (@col_mar * 2), 2);
+		width:round((100% / 3) - ($col_mar * 2), 2);
 	}
 }
 
@@ -9286,25 +9267,25 @@ q {
 	> aside:first-child, 
 	> div.cl + aside, 
 	> div.cmsms_widget_divider + aside {
-		width:round((100% / 3) - (@col_mar * 2), 2);
+		width:round((100% / 3) - ($col_mar * 2), 2);
 	}
 	
 	> aside:first-child + aside, 
 	> div.cl + aside + aside, 
 	> div.cmsms_widget_divider + aside + aside {
-		width:round(((100% * 2) / 3) - (@col_mar * 2), 2);
+		width:round(((100% * 2) / 3) - ($col_mar * 2), 2);
 	}
 }
 
 .sidebar_layout_1212 {
 	aside {
-		width:round((100% / 2) - (@col_mar * 2), 2);
+		width:round((100% / 2) - ($col_mar * 2), 2);
 	}
 }
 
 .sidebar_layout_11 {
 	aside {
-		width:round(100% - (@col_mar * 2), 2);
+		width:round(100% - ($col_mar * 2), 2);
 	}
 }
 
@@ -9361,7 +9342,7 @@ q {
 				}
 				
 				figure {
-					.ovh;
+					@include ovh;
 					position:relative;
 					max-width: 260px;
 					
@@ -9400,8 +9381,8 @@ q {
 					top:0;
 					left:0;
 					z-index:2;
-					.bdrs(0);
-					.op(0);
+					@include bdrs(0);
+					@include op(0);
 				}
 				
 				.pl_noimg {
@@ -9412,22 +9393,22 @@ q {
 					min-width:100%;
 					
 					&:before {
-						.pos_abs;
+						@include pos_abs;
 						font-size:50px;
 					}
 				}
 			}
 			
 			.pl_content {
-				.ovh;
+				@include ovh;
 				padding: 10px 0 50px 0;
 				
 				.pl_content_left {
-					.fl;
+					@include fl;
 				}
 				
 				.pl_content_right {
-					.fr;
+					@include fr;
 				}
 			}
 			
@@ -9481,25 +9462,25 @@ q {
 			}
 			
 			.entry-content {
-				.ovh;
+				@include ovh;
 			}
 		}
 	}
 	
 	&.horizontal {
-		margin:0 -@col_mar;
+		margin:0 -$col_mar;
 		
 		.profile {
 			margin-bottom:30px;
 			
 			.entry-content {
 				margin:20px 0 10px;
-				.tac;
+				@include tac;
 			}
 		}
 		
 		.pl_content {
-			.tac;
+			@include tac;
 		}
 		
 		.entry-title {
@@ -9508,7 +9489,7 @@ q {
 		
 		.pl_title_wrap {
 			padding-bottom: 20px;
-			.tac;
+			@include tac;
 		}
 		
 		.pl_subtitle {
@@ -9556,13 +9537,13 @@ q {
 			position: relative;
 			
 			img {
-				.bdrs(0);
+				@include bdrs(0);
 				width: 100%;
 			}
 		
 			
 			.pl_social {
-				.tac;
+				@include tac;
 				display: block;
 				width: 100%;
 				height: 100%;
@@ -9591,7 +9572,7 @@ q {
 			}
 			
 			figure {
-				.ovh;
+				@include ovh;
 				img {
 					-webkit-transform:scale(1, 1);
 					-moz-transform:scale(1, 1);
@@ -9675,7 +9656,7 @@ q {
 			margin:0;
 			
 			> span:before {
-				.tac;
+				@include tac;
 				font-size: 23px;
 			}
 		}
@@ -9695,15 +9676,15 @@ q {
 
 /***************** Dropcap ******************/
 .cmsms_dropcap {
-	.fl;
+	@include fl;
 	margin:5px 33px 5px 23px;
 	line-height:54px;
 	
 	&.type2 {
 		width:55px;
 		height:55px;
-		.bdrs(50%);
-		.tac;
+		@include bdrs(50%);
+		@include tac;
 		margin:5px 30px 5px 0;
 	}
 }
@@ -9811,7 +9792,7 @@ q {
 			-webkit-transform:scale(.5);
 			-moz-transform:scale(.5);
 			transform:scale(.5);
-			.op(.1);
+			@include op(.1);
 		}
 		
 		&.shortcode_animated {
@@ -9819,7 +9800,7 @@ q {
 				-webkit-transform:scale(1);
 				-moz-transform:scale(1);
 				transform:scale(1);
-				.op(1);
+				@include op(1);
 			}
 		}
 	}
@@ -9843,11 +9824,11 @@ q {
 /***************** Posts Slider ******************/
 .cmsms_posts_slider {
 	position:relative;
-	.ovh;
+	@include ovh;
 	margin: 0 3px 0 0;
 	
 	.preloader {
-		padding-bottom:@img_pad_bot;
+		padding-bottom:$img_pad_bot;
 		
 		&.highImg {
 			height:auto;
@@ -9878,19 +9859,19 @@ q {
 		
 		.cmsms_slider_post_cont {
 			position:relative;
-			.ovh;
+			@include ovh;
 			
 			.thumb_wrap {
 				width:27%;
 				margin:5px 30px 0 0;
 				max-width:150px;
-				.fl;
+				@include fl;
 			}
 			
 			.cmsms_slider_post_cont_wrap {
 				position:relative;
 				padding:60px 55px;
-				.ovh;
+				@include ovh;
 				
 				&:hover {
 					.cmsms_atach_img,
@@ -9928,7 +9909,7 @@ q {
 			.cmsms_slider_post_date {
 				position: relative;
 				z-index: 11;
-				.tac;
+				@include tac;
 				padding-bottom: 45px;
 				
 				.cmsms_post_date {
@@ -9944,7 +9925,7 @@ q {
 				position: relative;
 				z-index: 11;
 				padding:0 0 25px 0;
-				.tac;
+				@include tac;
 				
 				.cmsms_slider_post_title {
 					margin:0;
@@ -9952,7 +9933,7 @@ q {
 				
 				.cmsms_slider_post_subtitle {
 					margin:0;
-					.op;
+					@include op;
 				}
 			}
 			
@@ -9982,11 +9963,11 @@ q {
 			.cmsms_post_cont_info {
 				position: relative;
 				z-index: 11;
-				.tac;
+				@include tac;
 				padding: 0 0 5px 0;
 				margin-bottom:0;
-				.bdt(0);
-				.bdb(0);
+				@include bdt(0);
+				@include bdb(0);
 				
 				> span {
 					margin-right: 25px;
@@ -10008,7 +9989,7 @@ q {
 			
 			.cmsms_slider_post_content {
 				padding:0 0 7px 0;
-				.tac;
+				@include tac;
 				position: relative;
 				z-index: 11;
 				
@@ -10018,7 +9999,7 @@ q {
 			}
 			
 			.cmsms_slider_post_more {
-				.tac;
+				@include tac;
 				position: relative;
 				z-index: 11;
 				padding: 0 0 10px 0;
@@ -10111,7 +10092,7 @@ q {
 	.project {
 		position:relative;
 		min-width:300px;
-		.ovh;
+		@include ovh;
 		
 		.slider_project_outer {
 			overflow:visible;
@@ -10120,7 +10101,7 @@ q {
 			figure {
 				.cmsms_image_link,
 				.cmsms_open_link {
-					.bd(2px);
+					@include bd(2px);
 					width: 100px;
 					height: 44px;
 					text-align: center;
@@ -10138,12 +10119,12 @@ q {
 				width: 100%;
 				
 				.cmsms_slider_project_head {
-					.ovh;
+					@include ovh;
 				}
 				
 				.cmsms_slider_project_head_left {
 					position:relative;
-					.fl;
+					@include fl;
 					
 					.cmsms_slider_project_title {
 						margin:0 0 -5px;
@@ -10163,7 +10144,7 @@ q {
 				
 				
 				.cmsms_slider_project_head_right {
-					.fr;
+					@include fr;
 					line-height: 0;
 					
 					> a {
@@ -10206,13 +10187,13 @@ q {
 					.cmsms_image_link.no_open_link {
 						left:0;
 						right:0;
-						.op(1);
+						@include op(1);
 					}
 					
 					.cmsms_image_link {
 						left:-110px;
 						right:0;
-						.op(1);
+						@include op(1);
 					}
 					
 					.cmsms_image_link + .cmsms_open_link {
@@ -10241,7 +10222,7 @@ q {
 	margin-right:0;
 	margin-left:0;
 	padding-bottom:100%;
-	.cl;
+	@include cl;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -10251,12 +10232,12 @@ q {
 /***************** Tag Cloud ******************/
 
 .tagcloud {
-	.ovh;
+	@include ovh;
 	a {
 		padding: 5px 10px;
 		margin: 0 4px 4px 0;
 		display: block;
-		.fl;
+		@include fl;
 	}
 }
 
@@ -10351,11 +10332,11 @@ q {
 .sidebar {
 	.widget {
 		padding-bottom:45px;
-		.bdb(0px);
+		@include bdb(0px);
 		
 		&:last-child {
 			padding-bottom:0;
-			.bdb(0);
+			@include bdb(0);
 		}
 	}
 }
@@ -10399,7 +10380,7 @@ q {
 .widget_categories, 
 .widget_archive {
 	> .screen-reader-text {
-		.dn;
+		@include dn;
 	}
 }
 
@@ -10576,7 +10557,7 @@ q {
 			width:33%;
 			margin-left:0;
 			padding-left:2px;
-			.bdt(0);
+			@include bdt(0);
 			
 			&:first-child {
 				padding-left:0;
@@ -10631,7 +10612,7 @@ q {
 		
 		li {
 			padding:10px 0;
-			.bdt(0);
+			@include bdt(0);
 			
 			small {
 				display: block;
@@ -10684,7 +10665,7 @@ q {
 	position:relative;
 	
 	&:before {
-		.pos_abs;
+		@include pos_abs;
 		font-size:18px;
 	}
 }
@@ -10703,7 +10684,7 @@ q {
 		position:relative;
 		
 		&:before {
-			.pos_abs;
+			@include pos_abs;
 			font-size:40px;
 		}
 	}
@@ -10739,20 +10720,20 @@ q {
 /***************** Search ******************/
 .cmsms_search {
 	position:relative;
-	.ovh;
+	@include ovh;
 	
 	.middle_content & {
 		padding:60px 0;
 	}
 	
 	.cmsms_search_zero {
-		.tac;
+		@include tac;
 	}
 	
 	.cmsms_search_post {
 		padding:20px 0 0;
 		position:relative;
-		.ovh;
+		@include ovh;
 		
 		&:first-child {
 			padding-top:0;
@@ -10762,8 +10743,8 @@ q {
 			width:60px;
 			margin:5px 35px 15px 0;
 			position:relative;
-			.tac;
-			.fl;
+			@include tac;
+			@include fl;
 			
 			.cmsms_search_post_number {
 				display:inline-block;
@@ -10772,7 +10753,7 @@ q {
 				height:50px;
 				margin:0 0 5px;
 				position:relative;
-				.tac;
+				@include tac;
 			}
 			
 			.cmsms_post_type_label {
@@ -10782,13 +10763,13 @@ q {
 		
 		.cmsms_search_post_cont {
 			position:relative;
-			.ovh;
+			@include ovh;
 			
 			.cmsms_post_cont_info {
 				padding:20px 0;
 				margin:0;
-				.bdt(2px);
-				.bdb(0);
+				@include bdt(2px);
+				@include bdb(0);
 				
 				> span {
 					margin-right:25px;
@@ -10808,7 +10789,7 @@ q {
 			.cmsms_post_date, 
 			.cmsms_search_post_user_name, 
 			.cmsms_search_post_category {
-				.fr;
+				@include fr;
 			}
 		}
 	}
@@ -10824,7 +10805,7 @@ q {
 			
 			input[type=search] {
 				padding: 7px 20px 7px 0;
-				.bdb(2px);
+				@include bdb(2px);
 			}
 		}
 		
@@ -10910,7 +10891,7 @@ q {
 
 .cmsms_sitemap_wrap {
 	position:relative;
-	.ovh;
+	@include ovh;
 
 	ul, 
 	ol, 
@@ -10918,7 +10899,7 @@ q {
 		margin:0;
 		padding:0;
 		position:relative;
-		.ovh;
+		@include ovh;
 		
 		&:before {
 			content:none;
@@ -10932,7 +10913,7 @@ q {
 	.cmsms_sitemap {
 		padding:0;
 		margin:0;
-		.ovh;
+		@include ovh;
 		
 		> li {
 			width:100%;
@@ -10969,14 +10950,14 @@ q {
 			
 			> ul {
 				width:100%;
-				.ovh;
+				@include ovh;
 				
 				> li {
 					width:25%;
 					padding-top:0;
 					padding-right:20px;
 					margin-bottom:40px;
-					.fl;
+					@include fl;
 					
 					&:nth-child(5), 
 					&:nth-child(9), 
@@ -11019,13 +11000,13 @@ q {
 	
 	.cmsms_sitemap_category {
 		margin:0;
-		.ovh;
+		@include ovh;
 		
 		> li {
 			width:25%;
 			padding-right:20px;
 			margin-bottom:20px;
-			.fl;
+			@include fl;
 			
 			&:nth-child(5), 
 			&:nth-child(9), 
@@ -11067,13 +11048,13 @@ q {
 	.cmsms_sitemap_archive {
 		padding:5px 0 20px;
 		margin:0;
-		.ovh;
+		@include ovh;
 		
 		> li {
 			width:25%;
 			margin-bottom:20px;
 			padding-right:20px;
-			.fl;
+			@include fl;
 			
 			&:nth-child(5), 
 			&:nth-child(9), 
@@ -11099,7 +11080,7 @@ q {
 	#wpcontent .with_frm_style .frm_form_fields select, 
 	.with_frm_style .frm_form_fields select, 
 	.with_frm_style .frm_form_fields textarea {
-		padding:@input_pad;
+		padding:$input_pad;
 	}
 }
 
@@ -11126,13 +11107,13 @@ q {
 		> .paypal-donations {
 			input[type="image"] {
 				display:block;
-				.pos_abs(100%, 100%);
-				.op(0);
+				@include pos_abs(100%, 100%);
+				@include op(0);
 				z-index:100;
 			}
 			
 			> img {
-				.dn;
+				@include dn;
 			}
 		}
 	}
@@ -11151,14 +11132,14 @@ q {
 /*-------------------------------------------------------------------------*/
 
 .cmsms-form-builder	{
-	margin:0 -@col_mar;
+	margin:0 -$col_mar;
 	padding: 40px 0 0 0;
 	
 	input,
 	textarea {
-		.bd(0);
-		.bdb(2px);
-		.bdrs(0);
+		@include bd(0);
+		@include bdb(2px);
+		@include bdrs(0);
 		padding: 0 7px;
 		width: 100%;
 		
@@ -11167,8 +11148,8 @@ q {
 		&[type="email"]:focus,
 		&[type="text"]:focus {
 			background-color: transparent;
-			.bd(0);
-			.bdb(2px);
+			@include bd(0);
+			@include bdb(2px);
 		}
 	}
 	
@@ -11211,7 +11192,7 @@ q {
 	}
 
 	.success_box {
-		margin:0 @col_mar 10px;
+		margin:0 $col_mar 10px;
 		width:96%;
 	}
 	
@@ -11221,7 +11202,7 @@ q {
 			padding-bottom:35px !important;
 		}
 		
-		margin:0 @col_mar;
+		margin:0 $col_mar;
 		position: relative;
 		
 		&.submit_wrap {
@@ -11239,7 +11220,7 @@ q {
 select {
 	min-width:100px;
 	height:40px;
-	.bd(2px);
+	@include bd(2px);
 }
 
 span.wpcf7-list-item {
@@ -11299,7 +11280,7 @@ body .cmsms-form-builder .check_parent input[type="radio"] + label {
 	height:9px;
 	content:'';
 	opacity:0;
-	.bdrs(50%);
+	@include bdrs(50%);
 	-webkit-transform:scale(0);
 	-moz-transform:scale(0);
 	transform:scale(0);
@@ -11321,7 +11302,7 @@ body .cmsms-form-builder .check_parent input[type="radio"] + label {
 .cmsms-form-builder .check_parent input[type="radio"] + label:before {
 	display:block;
 	content:'';
-	.bdbx;
+	@include bdbx;
 	width:17px;
 	height:17px;
 	text-align:center;
@@ -11332,7 +11313,7 @@ body .cmsms-form-builder .check_parent input[type="radio"] + label {
 
 .wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="radio"] + span.wpcf7-list-item-label:before, 
 .cmsms-form-builder .check_parent input[type="radio"] + label:before {
-	.bdrs(50%);
+	@include bdrs(50%);
 }
 
 .widget_custom_contact_form_entries {
@@ -11382,7 +11363,7 @@ html.csstransitions {
 	.cmsms_profile.vertical .profile .pl_img .pl_noimg,
 	.cmsms_sitemap_wrap .cmsms_sitemap > li > ul > li > ul li a:before,
 	#navigation > li > a > span > span.nav_subtitle {
-		.trans(color .3s ease-in-out);
+		@include trans(color .3s ease-in-out);
 	}
 	
 	.button, 
@@ -11390,7 +11371,7 @@ html.csstransitions {
 	input[type=button], 
 	button, 
 	.cmsms_tabs .cmsms_tabs_list .cmsms_tabs_list_item {
-		.trans(~'color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out');
+		@include trans(~'color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out');
 	}
 	
 	#header nav,
@@ -11400,39 +11381,39 @@ html.csstransitions {
 	nav > div > ul ul,
 	nav > div > ul div,
 	nav > div > ul ul ul {
-		.trans(~'opacity .3s ease-in-out .5s, margin .3s ease-in-out .5s, max-width .7s linear');
+		@include trans(~'opacity .3s ease-in-out .5s, margin .3s ease-in-out .5s, max-width .7s linear');
 	}
 	
 	.cmsms_hover_slider_thumbs > li img,
 	.social_wrap a {
-		.trans(~'opacity .4s ease-in-out, width .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out');
+		@include trans(~'opacity .4s ease-in-out, width .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out');
 	}
 	
 	.cmsms_hover_slider_items > li {
-		.trans(~'opacity .5s ease-in-out, visibility .5s ease-in-out');
+		@include trans(~'opacity .5s ease-in-out, visibility .5s ease-in-out');
 	}
 	
 	#slide_top, 
 	#navigation li > a, 
 	#navigation li > a[data-tag]:before {
-		.trans(~'border-color .3s ease-in-out, background-color .3s ease-in-out, color .2s ease-in-out, padding-left .3s ease-in-out');
+		@include trans(~'border-color .3s ease-in-out, background-color .3s ease-in-out, color .2s ease-in-out, padding-left .3s ease-in-out');
 	}
 	
 	.cmsms_hover_slider_thumbs > li a,
 	.search_bar_wrap form .search_field input[type=search] {
-		.trans(border-color .3s ease-in-out);
+		@include trans(border-color .3s ease-in-out);
 	}
 	
 	nav > div > ul > li:hover > a:before {
-		.trans(~'opacity .3s ease-in-out, bottom .3s ease-in-out');
+		@include trans(~'opacity .3s ease-in-out, bottom .3s ease-in-out');
 	}
 	
 	.search_wrap {
-		.trans(~'background-color .3s ease-in-out, width .5s ease-in-out');
+		@include trans(~'background-color .3s ease-in-out, width .5s ease-in-out');
 	}
 	
 	.search_field {
-		.trans(~'opacity .4s ease-in-out, visibility .4s ease-in-out');
+		@include trans(~'opacity .4s ease-in-out, visibility .4s ease-in-out');
 	}
 	
 	
@@ -11440,7 +11421,7 @@ html.csstransitions {
 	.cmsms_profile .profile .pl_img figure a:after, 
 	.cmsms_profile .profile .pl_img .pl_noimg:after, 
 	.cmsms_hover_slider .cmsms_hover_slider_thumbs > li a:before {
-		.trans(opacity .4s ease-in-out);
+		@include trans(opacity .4s ease-in-out);
 	}
 	
 	input[type=tel],
@@ -11450,23 +11431,23 @@ html.csstransitions {
 	input[type=password], 
 	textarea, 
 	.cmsms_toggle_title .cmsms_toggle_plus {
-		.trans(~'border-color .2s ease-in-out, background-color .3s ease-in-out');
+		@include trans(~'border-color .2s ease-in-out, background-color .3s ease-in-out');
 	}
 	
 	.cmsms_tabs.tabs_mode_tab .cmsms_tabs_list .cmsms_tabs_list_item:before, 
 	.cmsms_tabs.lpr .cmsms_tabs_list .cmsms_tabs_list_item a:before {
-		.trans(~'background-color .4s ease-in-out, width .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out');
+		@include trans(~'background-color .4s ease-in-out, width .3s ease-in-out, left .3s ease-in-out, right .3s ease-in-out');
 	}
 	
 	.cmsms_tabs.tabs_mode_tour .cmsms_tabs_list .cmsms_tabs_list_item:before {
-		.trans(~'background-color .4s ease-in-out, height .3s ease-in-out, top .3s ease-in-out');
+		@include trans(~'background-color .4s ease-in-out, height .3s ease-in-out, top .3s ease-in-out');
 	}
 	
 	.owl-page, 
 	.owl-buttons .owl-prev span, 
 	.owl-buttons .owl-next span,
 	.tagcloud a{
-		.trans(~'color .3s ease-in-out, background-color .3s ease-in-out');
+		@include trans(~'color .3s ease-in-out, background-color .3s ease-in-out');
 	}
 
 	
@@ -11477,17 +11458,17 @@ html.csstransitions {
 	.cmsms_wrap_pagination ul li .page-numbers, 
 	.header_mid_outer, 
 	.header_side_outer {
-		.trans(~'background-color .2s ease-in-out, opacity .2s ease-in-out, color .3s ease-in-out');
+		@include trans(~'background-color .2s ease-in-out, opacity .2s ease-in-out, color .3s ease-in-out');
 	}
 	
 	.cmsms_button, 
 	.cmsms_button.cmsms_but_clear_styles:before, 
 	.cmsms_button.cmsms_but_clear_styles:after {
-		.trans(~'all .3s ease-in-out');
+		@include trans(~'all .3s ease-in-out');
 	}
 	
 	.sidebar.fl .widget_nav_menu li {
-		.trans(~'border-color .2s ease-in-out, background-color .2s ease-in-out, margin-right .3s ease-in-out, padding-right .3s ease-in-out');
+		@include trans(~'border-color .2s ease-in-out, background-color .2s ease-in-out, margin-right .3s ease-in-out, padding-right .3s ease-in-out');
 	}
 	
 	
@@ -11495,13 +11476,13 @@ html.csstransitions {
 	.cmsms-form-builder .check_parent input[type="checkbox"] + label:after,
 	.cmsms-form-builder .check_parent input[type="radio"] + label:after,
 	.wpcf7 form.wpcf7-form span.wpcf7-list-item input[type="radio"] + span.wpcf7-list-item-label:after {
-		.trans(~'all .2s ease-out');
+		@include trans(~'all .2s ease-out');
 	}
 	
 	.portfolio.puzzle .project .project_outer figure img, 
 	.portfolio.puzzle .project .project_outer figure .img_placeholder, 
 	.portfolio.puzzle .project .project_outer .project_inner {
-		.trans(~'all .2s ease-in-out');
+		@include trans(~'all .2s ease-in-out');
 	}
 	
 	.cmsms_post_filter_but:before, 
@@ -11512,7 +11493,7 @@ html.csstransitions {
 	.cmsms-form-builder .cmsms_textarea label,
 	.cmsms-form-builder .cmsms_input label,
 	.cmsms-form-builder .cmsms_textarea textarea {
-		.trans(~'all .3s ease-in-out');
+		@include trans(~'all .3s ease-in-out');
 	}
 	
 	.responsive_nav:before,
@@ -11521,7 +11502,7 @@ html.csstransitions {
 	.responsive_top_nav:before,
 	.responsive_top_nav:after,
 	.responsive_top_nav {
-		.trans(~'background-color .2s ease-out, border-color .2s ease-out');
+		@include trans(~'background-color .2s ease-out, border-color .2s ease-out');
 	}
 	
 	.cmsms_icon_box.cmsms_icon_top:before,
@@ -11534,39 +11515,39 @@ html.csstransitions {
 	.cmsms_icon_box.cmsms_icon_heading_left h4:before, 
 	.cmsms_icon_box.cmsms_icon_heading_left h5:before, 
 	.cmsms_icon_box.cmsms_icon_heading_left h6:before {
-		.trans(~'all 1s cubic-bezier(.55, .3, .5, 1.65)');
+		@include trans(~'all 1s cubic-bezier(.55, .3, .5, 1.65)');
 	}
 	
 	.cmsms_icon_list_items.cmsms_icon_list_type_block .cmsms_icon_list_item:before {
-		.trans(~'opacity .5s ease-in-out, height .8s ease-in');
+		@include trans(~'opacity .5s ease-in-out, height .8s ease-in');
 	}
 	
 	.cmsms_icon_list_items.cmsms_icon_list_type_block .cmsms_icon_list_item .cmsms_icon_list_icon, 
 	.cmsms_icon_list_items.cmsms_icon_list_type_block .cmsms_icon_list_item .cmsms_icon_list_icon:after {
-		.trans(~'all .5s ease-in-out');
+		@include trans(~'all .5s ease-in-out');
 	}
 	
 	.cmsms_icon_list_items.cmsms_icon_list_type_block .cmsms_icon_list_item .cmsms_icon_list_icon:before {
-		.trans(~'color .4s ease-in-out, font-size .4s ease-in-out, line-height .4s ease-in');
+		@include trans(~'color .4s ease-in-out, font-size .4s ease-in-out, line-height .4s ease-in');
 	}
 	
 	.cmsms_clients_item img,  
 	.cmsms_hover_slider .cmsms_hover_slider_thumbs a {
-		.trans(~'all .5s ease-in-out');
+		@include trans(~'all .5s ease-in-out');
 	}
 	
 	.cmsms_profile .profile img {
-		.trans(~'all .3s ease-in-out');
+		@include trans(~'all .3s ease-in-out');
 	}
 	
 	.cmsms_profile .profile .pl_social_list,
 	.cmsms_clients_slider_wrap .owl-controls .owl-buttons,
 	.cmsms_clients_slider_wrap .owl-wrapper-outer:hover + .owl-controls .owl-buttons {
-		.trans(~'opacity .3s ease-out, top .3s ease-out, visibility .3s ease-out');
+		@include trans(~'opacity .3s ease-out, top .3s ease-out, visibility .3s ease-out');
 	}
 	
 	.portfolio.grid article.project figure {
-		.trans(~'opacity .7s ease-in-out');
+		@include trans(~'opacity .7s ease-in-out');
 	}
 	
 	#footer .social_wrap ul li a,
@@ -11581,81 +11562,81 @@ html.csstransitions {
 	.cmsms_posts_slider .post .cmsms_slider_post_cont .cmsms_slider_post_heading,
 	.cmsms_posts_slider .post .cmsms_slider_post_cont .cmsms_slider_post_content,
 	.cmsms_posts_slider .post .cmsms_slider_post_cont .cmsms_slider_post_more {
-		.trans(~'color .3s ease-in-out');
+		@include trans(~'color .3s ease-in-out');
 	}
 	
 	.pl_social,
 	.cmsms_img_rolover,
 	.widget_pages ul li a:before,
 	.widget_categories ul li a:before {
-		.trans(~'background-color .3s ease-in-out');
+		@include trans(~'background-color .3s ease-in-out');
 	}
 	
 	#navigation li span.cmsms_cross:before,
 	#navigation li span.cmsms_cross:after,
 	.cmsms_posts_slider .project .slider_project_outer figure img,
 	.portfolio .project .project_outer figure img {
-		.trans(~'transform .3s ease-in-out, background-color .3s ease-in-out');
+		@include trans(~'transform .3s ease-in-out, background-color .3s ease-in-out');
 	}
 	
 	.cmsms_nav_but, 
 	.cmsms_nav_but:after, 
 	.cmsms_nav_but:before {
-		.trans(~'transform .3s ease-in-out, top .3s ease-in-out, background-color .3s ease-in-out');
+		@include trans(~'transform .3s ease-in-out, top .3s ease-in-out, background-color .3s ease-in-out');
 	}
 	
 	#header #navigation li > a[data-tag].cmsms_visible:before,
 	#header #navigation li > a[data-tag]:before,
 	#navigation li.menu-item-has-children > span.cmsms_cross.cmsms_visible,
 	.header_side .header_side_bottom_side.cmsms_visible {
-		.trans(~'opacity .1s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out');
+		@include trans(~'opacity .1s ease-in-out, background-color .3s ease-in-out, color .3s ease-in-out');
 	}
 	
 	#navigation li.menu-item-has-children > span.cmsms_cross,
 	.header_side .header_side_bottom_side {
-		.trans(~'opacity .1s ease-in-out');
+		@include trans(~'opacity .1s ease-in-out');
 	}
 	
 	.header_side, 
 	.header_side_inner {
-		.trans(~'width .3s ease-in-out');
+		@include trans(~'width .3s ease-in-out');
 	}
 	
 	.search_opened .search_bar_wrap button, 
 	.search_opened .search_bar_wrap button.cmsms_bfade {
-		.trans(~'opacity .2s ease-in-out');
+		@include trans(~'opacity .2s ease-in-out');
 	}
 	
 	.owl-buttons .owl-prev, 
 	.owl-buttons .owl-next {
-		.trans(~'all .3s ease-in-out');
+		@include trans(~'all .3s ease-in-out');
 	}
 	
 	.portfolio.puzzle .project .project_outer .project_inner .cmsms_project_head_wrap, 
 	.portfolio.puzzle .project .project_outer .project_inner .cmsms_project_footer {
-		.trans(~'transform .4s ease-in-out, opacity .2s ease-in-out');
+		@include trans(~'transform .4s ease-in-out, opacity .2s ease-in-out');
 	}
 	
 	.slider_project_inner,
 	.related_posts_item_wrap {
-		.trans(~'bottom .3s ease-in-out');
+		@include trans(~'bottom .3s ease-in-out');
 	}
 	
 	.portfolio.puzzle .project .project_outer:hover .project_inner .cmsms_project_head_wrap, 
 	.portfolio.puzzle .project .project_outer:hover .project_inner .cmsms_project_footer {
-		.trans(~'transform .4s ease-in-out, opacity 1s ease-in-out');
+		@include trans(~'transform .4s ease-in-out, opacity 1s ease-in-out');
 	}
 	
 	.portfolio.puzzle .project .project_outer .project_inner .cmsms_project_content {
-		.trans(~'margin .4s ease-in-out, opacity .4s ease-in-out');
+		@include trans(~'margin .4s ease-in-out, opacity .4s ease-in-out');
 	}
 
 	.cmsms_img_rollover_wrap .cmsms_img_rollover a {
-		.trans(~'left .3s ease-in-out, right .3s ease-in-out, opacity .3s ease-in-out, border-color .3s ease-in-out');
+		@include trans(~'left .3s ease-in-out, right .3s ease-in-out, opacity .3s ease-in-out, border-color .3s ease-in-out');
 	}
 	
 	.cmsms_img_rollover_wrap .cmsms_img_rollover {
-		.trans(~'background-color .3s ease-in-out');
+		@include trans(~'background-color .3s ease-in-out');
 	}
 	
 	.headline_outer .headline_inner .cmsms_breadcrumbs .cmsms_breadcrumbs_inner a,
@@ -11665,11 +11646,11 @@ html.csstransitions {
 	.cmsms_clients_slider_wrap .owl-controls .owl-buttons:hover,
 	.cmsms_clients_slider_wrap .owl-wrapper-outer:hover + .owl-controls .owl-buttons:hover,
 	.cmsms_clients_slider_wrap .owl-wrapper-outer:hover + .owl-controls .owl-buttons {
-		.trans(~'opacity .3s ease-in-out');
+		@include trans(~'opacity .3s ease-in-out');
 	} 
 	
 	.widget_nav_menu > div > ul li > a:before {
-		.trans(~'height .3s ease-in-out, background-color .3s ease-in-out');
+		@include trans(~'height .3s ease-in-out, background-color .3s ease-in-out');
 	}
 	
 	.cmsms_stats.stats_mode_bars.stats_type_horizontal.shortcode_animated .cmsms_stat_inner {
@@ -11966,9 +11947,4 @@ html.csstransitions {
 			opacity: 1;
 		}
 	}
-}
-
-html .cmsms_color_scheme_second .cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner .cmsms_counter_title{
-	color: #ff6e01 !important;
-
 }

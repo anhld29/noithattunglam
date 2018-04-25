@@ -1592,7 +1592,7 @@
 	.cmsms_search .cmsms_search_post_user_name a:hover, 
 	.cmsms_quotes_slider.cmsms_quotes_slider_type_center .cmsms_centered_quote:before,
 	.cmsms_notice .notice_close:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	mark,
@@ -1647,7 +1647,7 @@
 	.cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_hor,
 	.cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_vert,
 	.cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	.cmsms_project_filter_list .button, 
@@ -1690,7 +1690,7 @@
 	.cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_image_link:hover, 
 	.cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_open_link:hover, 
 	.cmsms_featured_campaign .campaign .cmsms_campaign_wrap_heading {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -2206,12 +2206,12 @@
 	
 	/* Start Custom Rules */
 	::selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;;
 	}
 	
 	::-moz-selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2246,15 +2246,15 @@
 /***************** Start Default Button Color Scheme Rules ******************/
 	
 	.cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_button.cmsms_but_bg_hover:hover, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2266,9 +2266,9 @@
 	.cmsms_button.cmsms_but_bg_expand_vert, 
 	.cmsms_button.cmsms_but_bg_expand_hor, 
 	.cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_button.cmsms_but_bg_slide_left:hover, 
@@ -2285,7 +2285,7 @@
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_vert, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_hor, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
 		color:#ffffff;
 	}
@@ -2297,18 +2297,18 @@
 	.cmsms_button.cmsms_but_bg_expand_vert:after, 
 	.cmsms_button.cmsms_but_bg_expand_hor:after, 
 	.cmsms_button.cmsms_but_bg_expand_diag:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	.cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	.cmsms_button.cmsms_but_shadow:hover, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2316,7 +2316,7 @@
 	.cmsms_button.cmsms_but_icon_dark_bg, 
 	.cmsms_button.cmsms_but_icon_light_bg, 
 	.cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2326,7 +2326,7 @@
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_dark_bg, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_light_bg, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2335,13 +2335,13 @@
 	}
 	
 	.cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	.cmsms_button.cmsms_but_icon_inverse:before {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_button.cmsms_but_icon_inverse:after {
@@ -2350,9 +2350,9 @@
 	
 	.cmsms_button.cmsms_but_icon_inverse:hover, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_button.cmsms_but_icon_inverse:hover:before, 
@@ -2362,23 +2362,23 @@
 	
 	.cmsms_button.cmsms_but_icon_inverse:hover:after, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	.cmsms_button.cmsms_but_icon_slide_left, 
 	.cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_button.cmsms_but_icon_slide_left:hover, 
 	.cmsms_button.cmsms_but_icon_slide_right:hover, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_left, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2387,8 +2387,8 @@
 	.cmsms_button.cmsms_but_icon_hover_slide_right, 
 	.cmsms_button.cmsms_but_icon_hover_slide_top, 
 	.cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -2400,8 +2400,8 @@
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	.cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 
@@ -2590,7 +2590,7 @@
 	html .cmsms_color_scheme_footer .cmsms_search .cmsms_search_post_user_name a:hover, 
 	html .cmsms_color_scheme_footer .cmsms_quotes_slider.cmsms_quotes_slider_type_center .cmsms_centered_quote:before,
 	html .cmsms_color_scheme_footer .cmsms_notice .notice_close:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_color_scheme_footer mark,
@@ -2645,7 +2645,7 @@
 	html .cmsms_color_scheme_footer .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_hor,
 	html .cmsms_color_scheme_footer .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_vert,
 	html .cmsms_color_scheme_footer .cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_project_filter_list .button, 
@@ -2688,7 +2688,7 @@
 	html .cmsms_color_scheme_footer .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_image_link:hover, 
 	html .cmsms_color_scheme_footer .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_open_link:hover, 
 	html .cmsms_color_scheme_footer .cmsms_featured_campaign .campaign .cmsms_campaign_wrap_heading {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -3204,12 +3204,12 @@
 	
 	/* Start Custom Rules */
 	html .cmsms_color_scheme_footer ::selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;;
 	}
 	
 	html .cmsms_color_scheme_footer ::-moz-selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3240,15 +3240,15 @@
 /***************** Start Footer Button Color Scheme Rules ******************/
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_hover:hover, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3260,9 +3260,9 @@
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_slide_left:hover, 
@@ -3279,7 +3279,7 @@
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
 		color:#ffffff;
 	}
@@ -3291,18 +3291,18 @@
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_expand_vert:after, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_expand_hor:after, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_bg_expand_diag:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_shadow:hover, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3310,7 +3310,7 @@
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3320,7 +3320,7 @@
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3329,13 +3329,13 @@
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_inverse:before {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_inverse:after {
@@ -3344,9 +3344,9 @@
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_inverse:hover, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_inverse:hover:before, 
@@ -3356,23 +3356,23 @@
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_inverse:hover:after, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_slide_left:hover, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_slide_right:hover, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3381,8 +3381,8 @@
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_footer .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -3394,8 +3394,8 @@
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_footer .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 
@@ -3584,7 +3584,7 @@
 	html .cmsms_color_scheme_first .cmsms_search .cmsms_search_post_user_name a:hover, 
 	html .cmsms_color_scheme_first .cmsms_quotes_slider.cmsms_quotes_slider_type_center .cmsms_centered_quote:before,
 	html .cmsms_color_scheme_first .cmsms_notice .notice_close:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_color_scheme_first mark,
@@ -3639,7 +3639,7 @@
 	html .cmsms_color_scheme_first .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_hor,
 	html .cmsms_color_scheme_first .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_vert,
 	html .cmsms_color_scheme_first .cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_project_filter_list .button, 
@@ -3682,7 +3682,7 @@
 	html .cmsms_color_scheme_first .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_image_link:hover, 
 	html .cmsms_color_scheme_first .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_open_link:hover, 
 	html .cmsms_color_scheme_first .cmsms_featured_campaign .campaign .cmsms_campaign_wrap_heading {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -4198,12 +4198,12 @@
 	
 	/* Start Custom Rules */
 	html .cmsms_color_scheme_first ::selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#f4f4f4;;
 	}
 	
 	html .cmsms_color_scheme_first ::-moz-selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4234,15 +4234,15 @@
 /***************** Start Custom 1 Button Color Scheme Rules ******************/
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#f4f4f4;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_hover:hover, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4254,9 +4254,9 @@
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#f4f4f4;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_slide_left:hover, 
@@ -4273,7 +4273,7 @@
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#f4f4f4;
 		color:#f4f4f4;
 	}
@@ -4285,18 +4285,18 @@
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_expand_vert:after, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_expand_hor:after, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_bg_expand_diag:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_shadow:hover, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4304,7 +4304,7 @@
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4314,7 +4314,7 @@
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4323,13 +4323,13 @@
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_inverse:before {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_inverse:after {
@@ -4338,9 +4338,9 @@
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_inverse:hover, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#f4f4f4;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_inverse:hover:before, 
@@ -4350,23 +4350,23 @@
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_inverse:hover:after, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#f4f4f4;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_slide_left:hover, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_slide_right:hover, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4375,8 +4375,8 @@
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_first .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 	
@@ -4388,8 +4388,8 @@
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_first .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#f4f4f4;
 	}
 
@@ -4578,7 +4578,7 @@
 	html .cmsms_color_scheme_second .cmsms_search .cmsms_search_post_user_name a:hover, 
 	html .cmsms_color_scheme_second .cmsms_quotes_slider.cmsms_quotes_slider_type_center .cmsms_centered_quote:before,
 	html .cmsms_color_scheme_second .cmsms_notice .notice_close:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_color_scheme_second mark,
@@ -4633,7 +4633,7 @@
 	html .cmsms_color_scheme_second .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_hor,
 	html .cmsms_color_scheme_second .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_vert,
 	html .cmsms_color_scheme_second .cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_project_filter_list .button, 
@@ -4676,7 +4676,7 @@
 	html .cmsms_color_scheme_second .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_image_link:hover, 
 	html .cmsms_color_scheme_second .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_open_link:hover, 
 	html .cmsms_color_scheme_second .cmsms_featured_campaign .campaign .cmsms_campaign_wrap_heading {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -5192,12 +5192,12 @@
 	
 	/* Start Custom Rules */
 	html .cmsms_color_scheme_second ::selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;;
 	}
 	
 	html .cmsms_color_scheme_second ::-moz-selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5228,15 +5228,15 @@
 /***************** Start Custom 2 Button Color Scheme Rules ******************/
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_hover:hover, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5248,9 +5248,9 @@
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_slide_left:hover, 
@@ -5267,7 +5267,7 @@
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
 		color:#ffffff;
 	}
@@ -5279,18 +5279,18 @@
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_expand_vert:after, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_expand_hor:after, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_bg_expand_diag:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_shadow:hover, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5298,7 +5298,7 @@
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5308,7 +5308,7 @@
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5317,13 +5317,13 @@
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_inverse:before {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_inverse:after {
@@ -5332,9 +5332,9 @@
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_inverse:hover, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_inverse:hover:before, 
@@ -5344,23 +5344,23 @@
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_inverse:hover:after, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_slide_left:hover, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_slide_right:hover, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5369,8 +5369,8 @@
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_second .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -5382,8 +5382,8 @@
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_second .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 
@@ -5572,7 +5572,7 @@
 	html .cmsms_color_scheme_third .cmsms_search .cmsms_search_post_user_name a:hover, 
 	html .cmsms_color_scheme_third .cmsms_quotes_slider.cmsms_quotes_slider_type_center .cmsms_centered_quote:before,
 	html .cmsms_color_scheme_third .cmsms_notice .notice_close:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.cmsms_color_scheme_third mark,
@@ -5627,7 +5627,7 @@
 	html .cmsms_color_scheme_third .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_hor,
 	html .cmsms_color_scheme_third .cmsms_toggles .cmsms_toggle_wrap .cmsms_toggle_title:hover > .cmsms_toggle_plus > .cmsms_toggle_plus_vert,
 	html .cmsms_color_scheme_third .cmsms_counters .cmsms_counter_wrap .cmsms_counter .cmsms_counter_inner:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_project_filter_list .button, 
@@ -5670,7 +5670,7 @@
 	html .cmsms_color_scheme_third .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_image_link:hover, 
 	html .cmsms_color_scheme_third .cmsms_img_rollover_wrap .cmsms_img_rollover .cmsms_open_link:hover, 
 	html .cmsms_color_scheme_third .cmsms_featured_campaign .campaign .cmsms_campaign_wrap_heading {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -6168,17 +6168,17 @@
 	
 	html .cmsms_color_scheme_third .cmsms_icon_list_items.cmsms_color_type_bg .cmsms_icon_list_item .cmsms_icon_list_icon,
 	html .cmsms_color_scheme_third .headline_outer .headline_icon:before{
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third html:before,
 	html .cmsms_color_scheme_third html:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third #middle,
 	html .cmsms_color_scheme_third #bottom {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 		
 	/* Finish Custom Color */
@@ -6186,12 +6186,12 @@
 	
 	/* Start Custom Rules */
 	html .cmsms_color_scheme_third ::selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;;
 	}
 	
 	html .cmsms_color_scheme_third ::-moz-selection {
-		background:#ff6e01;
+		background:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6222,15 +6222,15 @@
 /***************** Start Custom 3 Button Color Scheme Rules ******************/
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_hover:hover, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_hover {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6242,9 +6242,9 @@
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_slide_left:hover, 
@@ -6261,7 +6261,7 @@
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_vert, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_hor, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_bg_expand_diag {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
 		color:#ffffff;
 	}
@@ -6273,18 +6273,18 @@
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_expand_vert:after, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_expand_hor:after, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_bg_expand_diag:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_shadow:hover, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_shadow {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6292,7 +6292,7 @@
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6302,7 +6302,7 @@
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_dark_bg, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_light_bg, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_divider {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6311,13 +6311,13 @@
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_inverse:before {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_inverse:after {
@@ -6326,9 +6326,9 @@
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_inverse:hover, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_inverse:hover:before, 
@@ -6338,23 +6338,23 @@
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_inverse:hover:after, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_inverse:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 		background-color:#ffffff;
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_slide_left:hover, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_slide_right:hover, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_left, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_slide_right {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6363,8 +6363,8 @@
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_third .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 	
@@ -6376,8 +6376,8 @@
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_right, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_top, 
 	html .cmsms_color_scheme_third .cmsms_paypal_donations > form:hover + .cmsms_button.cmsms_but_icon_hover_slide_bottom {
-		border-color:#ff6e01;
-		background-color:#ff6e01;
+		border-color:#bda87f;
+		background-color:#bda87f;
 		color:#ffffff;
 	}
 
@@ -6450,7 +6450,7 @@
 	.woocommerce-shipping-calculator a.shipping-calculator-button:hover,
 	.comment-form-rating .stars > span a.active, 
 	.cmsms_products .product .product_outer .product_inner .cmsms_add_to_cart_wrap a:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.onsale, 
@@ -6466,11 +6466,11 @@
 	.widget_product_categories ul li a:hover:before, 
 	.widget_product_categories ul li.current-cat a:before,
 	.shop_table td.actions .button[name=update_cart]:hover {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	.select2-container.select2-container--open .select2-selection--single {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -6738,7 +6738,7 @@
 	html .cmsms_color_scheme_footer .woocommerce-shipping-calculator a.shipping-calculator-button:hover,
 	html .cmsms_color_scheme_footer .comment-form-rating .stars > span a.active, 
 	html .cmsms_color_scheme_footer .cmsms_products .product .product_outer .product_inner .cmsms_add_to_cart_wrap a:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .onsale, 
@@ -6754,11 +6754,11 @@
 	html .cmsms_color_scheme_footer .widget_product_categories ul li a:hover:before, 
 	html .cmsms_color_scheme_footer .widget_product_categories ul li.current-cat a:before,
 	html .cmsms_color_scheme_footer .shop_table td.actions .button[name=update_cart]:hover {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_footer .select2-container.select2-container--open .select2-selection--single {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -7026,7 +7026,7 @@
 	html .cmsms_color_scheme_first .woocommerce-shipping-calculator a.shipping-calculator-button:hover,
 	html .cmsms_color_scheme_first .comment-form-rating .stars > span a.active, 
 	html .cmsms_color_scheme_first .cmsms_products .product .product_outer .product_inner .cmsms_add_to_cart_wrap a:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .onsale, 
@@ -7042,11 +7042,11 @@
 	html .cmsms_color_scheme_first .widget_product_categories ul li a:hover:before, 
 	html .cmsms_color_scheme_first .widget_product_categories ul li.current-cat a:before,
 	html .cmsms_color_scheme_first .shop_table td.actions .button[name=update_cart]:hover {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_first .select2-container.select2-container--open .select2-selection--single {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -7314,7 +7314,7 @@
 	html .cmsms_color_scheme_second .woocommerce-shipping-calculator a.shipping-calculator-button:hover,
 	html .cmsms_color_scheme_second .comment-form-rating .stars > span a.active, 
 	html .cmsms_color_scheme_second .cmsms_products .product .product_outer .product_inner .cmsms_add_to_cart_wrap a:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .onsale, 
@@ -7330,11 +7330,11 @@
 	html .cmsms_color_scheme_second .widget_product_categories ul li a:hover:before, 
 	html .cmsms_color_scheme_second .widget_product_categories ul li.current-cat a:before,
 	html .cmsms_color_scheme_second .shop_table td.actions .button[name=update_cart]:hover {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_second .select2-container.select2-container--open .select2-selection--single {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -7602,7 +7602,7 @@
 	html .cmsms_color_scheme_third .woocommerce-shipping-calculator a.shipping-calculator-button:hover,
 	html .cmsms_color_scheme_third .comment-form-rating .stars > span a.active, 
 	html .cmsms_color_scheme_third .cmsms_products .product .product_outer .product_inner .cmsms_add_to_cart_wrap a:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .onsale, 
@@ -7618,11 +7618,11 @@
 	html .cmsms_color_scheme_third .widget_product_categories ul li a:hover:before, 
 	html .cmsms_color_scheme_third .widget_product_categories ul li.current-cat a:before,
 	html .cmsms_color_scheme_third .shop_table td.actions .button[name=update_cart]:hover {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	html .cmsms_color_scheme_third .select2-container.select2-container--open .select2-selection--single {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Primary Color */
 	
@@ -7921,26 +7921,26 @@
 	.header_mid .cmsms_dynamic_cart .widget_shopping_cart_content .total .amount,
 	.header_mid_inner .header_right_wrap .search_wrap.search_opened p.search_button button:hover:before,
 	.header_mid #navigation > li > a > span:before	{
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.header_mid .responsive_nav:hover:before,
 	.header_mid .responsive_nav.active:before,
 	.header_mid .responsive_nav.active:after,
 	.header_mid .responsive_nav:hover:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	.header_mid .responsive_nav.active, 
 	.header_mid .responsive_nav:hover, 
 	.header_mid .cmsms_dynamic_cart .widget_shopping_cart_content .buttons .button:hover {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	
 	
 	@media only screen and (min-width: 1024px) {
 		.header_mid #navigation > li:hover > a {
-			color:#ff6e01;
+			color:#bda87f;
 		}
 	}
 	
@@ -7957,7 +7957,7 @@
 		#header .header_mid #navigation > li.current-menu-item > a > span > span.nav_subtitle,
 		#header .header_mid #navigation > li.current_page_item > a > span > span.nav_subtitle,
 		#header .header_mid #navigation > li.menu-item-highlight > a > span > span.nav_subtitle {
-			color:#ff6e01;
+			color:#bda87f;
 		}
 		
 
@@ -7992,7 +7992,7 @@
 		#header .header_mid_inner #navigation > li.current-menu-item > span.cmsms_cross.cmsms_opened_list:after,
 		#header .header_mid_inner #navigation > li.current-menu-item > span.cmsms_cross:before,
 		#header .header_mid_inner #navigation > li.current-menu-item > span.cmsms_cross:after {
-			background-color:#ff6e01;
+			background-color:#bda87f;
 		}
 		
 		#header .header_mid #navigation > li > a,
@@ -8016,12 +8016,12 @@
 	.header_mid #navigation ul li > a[data-tag]:before,
 	.header_mid .cmsms_dynamic_cart .widget_shopping_cart_content .buttons .button:hover,
 	.header_mid #navigation > li.menu-item-highlight > a[data-tag]:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	@media only screen and (max-width: 1024px) {
 		.header_mid #navigation > li:hover > a[data-tag]:before {
-			background-color:#ff6e01;
+			background-color:#bda87f;
 		}
 	}
 	
@@ -8058,7 +8058,7 @@
 	.header_mid input[type=password]:focus,
 	.header_mid input[type=search]:focus,
 	.header_mid textarea:focus,
-	{
+	#header {
 		background-color:#ffffff;
 	}
 	/* Finish Header Background Color */
@@ -8314,7 +8314,7 @@
 	.header_side .cmsms_dynamic_cart .widget_shopping_cart_content .cart_list li a:hover,
 	.header_side .cmsms_dynamic_cart .widget_shopping_cart_content .total .amount,
 	.header_side .cmsms_dynamic_cart a.cmsms_dynamic_cart_button:hover {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	.header_side #navigation > li > a[data-tag]:before,
@@ -8330,18 +8330,18 @@
 	.header_side .responsive_nav.active:before,
 	.header_side .cmsms_dynamic_cart .widget_shopping_cart_content .buttons .button:hover,
 	.header_side .responsive_nav.active:after {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	.header_side .responsive_nav:hover,
 	.header_side .cmsms_dynamic_cart .widget_shopping_cart_content .buttons .button:hover,
 	.header_side .responsive_nav.active {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	
 	@media only screen and (min-width: 1024px) {
 		.header_side #navigation > li:hover > a[data-tag]:before {
-			background-color:#ff6e01;
+			background-color:#bda87f;
 		}
 	}
 	/* Finish Header Side Rollover Color */
@@ -8471,7 +8471,7 @@
 		.header_side #navigation > li.current-menu-item > a > span > span.nav_subtitle,
 		.header_side #navigation > li.current_page_item > a > span > span.nav_subtitle,
 		.header_side #navigation > li.menu-item-highlight > a > span > span.nav_subtitle {
-			color:#ff6e01;
+			color:#bda87f;
 		}
 	}
 	
@@ -8691,7 +8691,7 @@
 	.header_top #top_line_nav > li > a:hover,
 	.header_top #top_line_nav > li.current-menu-item > a,
 	.header_top #top_line_nav > li.current_page_item > a {
-		color:#ff6e01;
+		color:#bda87f;
 	}
 	
 	
@@ -8699,23 +8699,23 @@
 	.responsive_top_nav.active:after,
 	.responsive_top_nav.active:before,
 	.responsive_top_nav:hover:before {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	.responsive_top_nav:hover,
 	.responsive_top_nav.active {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	
 	@media only screen and (min-width: 1024px) {
 		.header_top #top_line_nav > li > a:hover {
-			color:#ff6e01;
+			color:#bda87f;
 		}
 	}
 	
 	.header_top_but .cmsms_top_arrow_pixel, 
 	.header_top_but .cmsms_bot_arrow_pixel {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	.header_top_but .cmsms_top_arrow_pixel:before, 
@@ -8726,7 +8726,7 @@
 	.header_top_but .cmsms_bot_arrow_pixel:after, 
 	.header_top_but .cmsms_bot_arrow_pixel span:before, 
 	.header_top_but .cmsms_bot_arrow_pixel span:after {
-		border-color:#ff6e01;
+		border-color:#bda87f;
 	}
 	/* Finish Header Top Rollover Color */
 	
@@ -8745,7 +8745,7 @@
 	.header_top input[type=search]:focus,
 	.header_top textarea:focus,
 	.header_top {
-		background: rgba(0, 0, 0, .5);
+		background-color:#252531;
 	}
 	
 	/* Finish Header Top Background Color */
@@ -8819,12 +8819,12 @@
 	.header_top textarea,
 	.header_top select,
 	.header_top option {
-		background-color:#ff6e01;
+		background-color:#bda87f;
 	}
 	
 	@media only screen and (max-width: 1024px) {
 		.header_top #top_line_nav {
-			background-color:#ff6e01;
+			background-color:#bda87f;
 		}
 	}
 	
@@ -8834,7 +8834,7 @@
 		.responsive_top_nav:hover:before,
 		.responsive_top_nav:hover
 		.responsive_top_nav.active {
-			background-color:#ff6e01;
+			background-color:#bda87f;
 		}
 	}
 	/* Finish Header Top Dropdown Background Color */
